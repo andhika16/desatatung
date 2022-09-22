@@ -1,26 +1,31 @@
 import React from "react";
+import drop from "../assets/down-arrow.png";
 
-const Dropdown = () => {
+const Dropdown = ({ nama, list }) => {
   return (
     <>
-      <div className="relative group m-4">
-        <div className="flex flex-row   font-inter">
-          <p>Profil desa</p>
+      <div className="relative group ss:m-4">
+        <div className="flex flex-row items-center">
+          <div className="flex flex-row ">
+            <p>{nama}</p>
+          </div>
+
+          <div className="w-[35px] h-[35px]">
+            <img
+              className="w-[100%] h-[100%] object-contain"
+              src={drop}
+              alt="drop"
+            />
+          </div>
         </div>
-        <div className="absolute mx-5 z-10 hidden bg-grey-200 group-hover:block ">
+
+        <div className="ss:absolute  z-10 hidden bg-grey-200 group-hover:block ">
           <div className="px-2 pt-2 pb-4 bg-white  shadow-lg w-[80px] text-center">
-            <p>
-              <a href="anu">anu</a>
-            </p>
-            <p>
-              <a href="anu">anu</a>
-            </p>
-            <p>
-              <a href="anu">anu</a>
-            </p>
-            <p>
-              <a href="anu">anu</a>
-            </p>
+            {list.map((isi) => (
+              <p className="font-inter" key={isi.id}>
+                {isi.nama}
+              </p>
+            ))}
           </div>
         </div>
       </div>

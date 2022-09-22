@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "desatatung",
   "version": "1.0.0",
   "description": "",
@@ -17,4 +18,9 @@
     "url": "https://github.com/andhika16/desatatung/issues"
   },
   "homepage": "https://github.com/andhika16/desatatung#readme"
+=======
+  "dependencies": {
+    "dotenv": "^16.0.2"
+  }
+>>>>>>> c8a7ac73492d0815b5a095286cc1bdb27f3bfabf
 }
