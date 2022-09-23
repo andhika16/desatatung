@@ -1,6 +1,8 @@
 import Navbar from "./components/Navbar";
 import Sidebar from "./routes/Sidebar";
+
 import Beranda from "./routes/Beranda";
+import SideNav from "./components/SideNav";
 
 function App() {
   return (
@@ -9,7 +11,7 @@ function App() {
         <Navbar />
         <div className="w-[100%] bg-gray-200 flex flex-col sm:flex-row">
           <Beranda />
-          <Sidebar />
+          <SideNav />
         </div>
       </div>
     </div>

@@ -54,15 +54,3 @@ const Beranda = () => {
 };
 
 export default Beranda;
-
-// news = await fetch(
-//   "https://bloomberg-market-and-financial-news.p.rapidapi.com/stories/list",
-//   {
-//     method: "GET",
-//     params: { template: "CURRENCY", id: "usdjpy" },
-//     headers: {
-//       "X-RapidAPI-Key": "49805673bdmshf7dbdfd1b2374e1p110fdajsnedd9d28c0881",
-//       "X-RapidAPI-Host": "bloomberg-market-and-financial-news.p.rapidapi.com",
-//     },
-//   }
-// );
