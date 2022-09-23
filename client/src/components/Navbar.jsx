@@ -7,7 +7,6 @@ import { useState } from "react";
 import { ProfilDesa, pemerintahan, informasiPublik } from "./Link";
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
-  console.log(showNav);
   return (
     <nav>
       <div className="w-full  bg-slate-800 flex flex-row py-2 px-10 flex-wrap">
