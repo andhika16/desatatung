@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <div className="md:mx-20">
         <Navbar />
-        <div className="w-[100%]  flex flex-col sm:flex-row">
+        <div className="w-[100%]  flex flex-col sm:flex-row sm:mx-5">
           <Beranda />
           <Sidebar />
         </div>

@@ -21,12 +21,12 @@ import SidebarHeading from "../components/SidebarHeading";
 const Sidebar = () => {
   return (
     <>
-      <div className="sm:my-3 sm:m-10 w-1/7 px-2 ">
-        <span>
+      <div className="sm:my-3 sm:m-10 px-3">
+        <div>
           <p className="font-inter text-lg font-semibold uppercase text-center">
             Informasi desa
           </p>
-        </span>
+        </div>
         <div className="bg-white p-2  my-2">
           <SidebarHeading judul={"layanan informasi"} icon={<FaFolder />} />
           <div className="object-contain">

@@ -29,16 +29,16 @@ const Beranda = () => {
   if (isLoading) return <LoadingSpinner />;
 
   return (
-    <div className="">
-      <div className="flex flex-col  p-3">
-        <span>
+    <div className="w-full">
+      <div className="flex flex-col m-3">
+        <div>
           <p className="font-inter text-lg font-semibold uppercase text-center">
             berita terkini
           </p>
-        </span>
-        {/* {data.map((news, index) => (
+        </div>
+        {data.map((news, index) => (
           <div className="flex flex-col   ss:flex-row py-3" key={index}>
-            <div className="ss:w-3/5 sm:w-[200px] h-[200px] object-contain">
+            <div className="ss:w-1/5 bg-cover object-contain">
               <img
                 className="w-[100%] h-[100%] object-contain rounded"
                 src={news.image.url}
@@ -46,13 +46,15 @@ const Beranda = () => {
               />
             </div>
             <div className=" sm:m-0 sm:ml-3 sm:w-3/4">
-              <p className="font-inter font-semibold m-3 text-justify">
+              <p className="font-inter font-semibold m-3 text-justify sm:text-lg">
                 {news.head}
               </p>
-              <p className="font-inter  text-md antialiased text-justify m-3 leading-6 "></p>
+              <p className="font-inter truncate w-56 text-sm sm:text-md antialiased text-justify m-3 leading-6 ">
+                {news.body}
+              </p>
             </div>
           </div>
-        ))} */}
+        ))}
       </div>
     </div>
   );
