@@ -1,90 +1,30 @@
-class PieChartExample extends React.Component {
-  state = { sinVal: 0 };
+import React from "react";
+import Chart from "chart.js/auto";
+import { Bar, Doughnut } from "react-chartjs-2";
 
-  _animateValue = () => {
-    const sinVal = Math.min(
-      Math.abs(
-        Math.cos(new Date() * 0.001) * Math.sin(new Date() * 0.0011) + 1
-      ),
-      2
-    );
-    this.setState({ sinVal });
+const ChartBar = () => {
+  const state = {
+    labels: ["PRIA", "WANITA", "TOTAL"],
+    datasets: [
+      {
+        label: "",
+        data: [500, 1000, 1500, 400, 500, 2000, 2500],
+        backgroundColor: [
+          "rgba(223, 0, 0, 0.8)",
+          "rgba(54, 162, 235, 0.2)",
+          "rgba(255, 216, 8, 0.8)",
+        ],
+        barPercentage: 0.9,
+        maxBarThickness: 50,
+        categoryPercentage: 0.2,
+      },
+    ],
   };
-
-  componentDidMount() {
-    this._interval = setInterval(this._animateValue, 20);
-  }
-  componentWillUnmount() {
-    clearInterval(this._interval);
-  }
-
-  getPieSliceFill = (datum) => {
-    const color = d3.interpolateSinebow(datum / 100);
-    return {
-      fill: color,
-    };
-  };
-
-  render() {
-    const slice = (d) => d;
-    return (
-     
-    );
-  }
-}
-
-
-import React from 'react'
-
-const Chart = () => {
-
-    const []
-
   return (
-     <div>
-        <PieChart
-          slice={slice}
-          data={[45, 25, 78]}
-          pieSliceStyle={this.getPieSliceFill}
-        />
-        <PieChart
-          slice={slice}
-          data={[10, 20, 30]}
-          radius={100}
-          holeRadius={50}
-          margin={20}
-          markerLineValue={20}
-        />
-        <PieChart
-          slice={slice}
-          data={[42]}
-          total={100}
-          radius={80}
-          holeRadius={50}
-          centerLabel="42%"
-        />
-        <PieChart
-          slice={slice}
-          data={[this.state.sinVal]}
-          total={2}
-          radius={200}
-          holeRadius={50}
-          centerLabel={(this.state.sinVal * 50).toFixed(0)}
-        />
-        <PieChart
-          slice={slice}
-          data={[45, 35, 20]}
-          getPieSliceLabel={(val) => `${val}%`}
-          pieSliceLabelDistance={20}
-          holeRadius={75}
-          radius={100}
-          marginTop={50}
-          marginBottom={50}
-          marginLeft={50}
-          marginRight={50}
-        />
-      </div>
-  )
-}
+    <div>
+      <Bar data={state} />
+    </div>
+  );
+};
 
-export default Chart
+export default ChartBar;

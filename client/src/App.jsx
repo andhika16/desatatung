@@ -2,17 +2,20 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./routes/Sidebar";
 
 import Beranda from "./routes/Beranda";
-import SideNav from "./components/SideNav";
+import Chart from "./components/Chart";
+import Test from "./components/Test";
+import Maps from "./components/Maps";
 
 function App() {
   return (
     <div className="App">
       <div className="md:mx-20">
         <Navbar />
-        <div className="w-[100%] bg-gray-200 flex flex-col sm:flex-row">
+        <div className="w-[100%]  flex flex-col sm:flex-row">
           <Beranda />
-          <SideNav />
+          <Sidebar />
         </div>
+        <Maps />
       </div>
     </div>
   );
