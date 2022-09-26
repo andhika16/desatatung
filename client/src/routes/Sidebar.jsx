@@ -21,7 +21,7 @@ import SidebarHeading from "../components/SidebarHeading";
 const Sidebar = () => {
   return (
     <>
-      <div className="sm:my-3 sm:m-10  px-2 ">
+      <div className="sm:my-3 sm:m-10 w-1/7 px-2 ">
         <span>
           <p className="font-inter text-lg font-semibold uppercase text-center">
             Informasi desa

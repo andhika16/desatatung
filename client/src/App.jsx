@@ -1,10 +1,7 @@
 import Navbar from "./components/Navbar";
 import Sidebar from "./routes/Sidebar";
-
+import LoadingSpinner from "./components/LoadingSpinner";
 import Beranda from "./routes/Beranda";
-import Chart from "./components/Chart";
-import Test from "./components/Test";
-import Maps from "./components/Maps";
 
 function App() {
   return (
@@ -15,7 +12,6 @@ function App() {
           <Beranda />
           <Sidebar />
         </div>
-        <Maps />
       </div>
     </div>
   );

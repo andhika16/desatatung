@@ -1,25 +1,32 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const Beranda = () => {
+  const [isLoading, setLoading] = useState(true);
   const [data, setShowData] = useState([]);
   const url =
-    "https://bloomberg-market-and-financial-news.p.rapidapi.com/stories/list?template=CURRENCY&id=usdjpy";
+    "https://imdb8.p.rapidapi.com/actors/get-all-news?nconst=nm0001667";
 
   const options = {
     method: "GET",
     headers: {
       "X-RapidAPI-Key": "49805673bdmshf7dbdfd1b2374e1p110fdajsnedd9d28c0881",
-      "X-RapidAPI-Host": "bloomberg-market-and-financial-news.p.rapidapi.com",
+      "X-RapidAPI-Host": "imdb8.p.rapidapi.com",
     },
   };
 
   useEffect(() => {
     fetch(url, options)
       .then((res) => res.json())
-      .then((json) => setShowData(json.stories))
+      .then((json) => {
+        setShowData(json.items);
+        setLoading(false);
+      })
       .catch((err) => console.error("error:" + err));
   }, []);
+
+  if (isLoading) return <LoadingSpinner />;
 
   return (
     <div className="">
@@ -29,26 +36,23 @@ const Beranda = () => {
             berita terkini
           </p>
         </span>
-        {data.map((news, index) => (
+        {/* {data.map((news, index) => (
           <div className="flex flex-col   ss:flex-row py-3" key={index}>
-            <div className="ss:w-3/5 sm:w-full">
+            <div className="ss:w-3/5 sm:w-[200px] h-[200px] object-contain">
               <img
                 className="w-[100%] h-[100%] object-contain rounded"
-                src={news.thumbnailImage}
-                alt={news.shortURL}
+                src={news.image.url}
+                alt={news.image.id}
               />
             </div>
             <div className=" sm:m-0 sm:ml-3 sm:w-3/4">
               <p className="font-inter font-semibold m-3 text-justify">
-                {news.title}
+                {news.head}
               </p>
-              <p className="font-inter  text-md antialiased  m-3 leading-6 ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptates eos aut neque autem nam consequuntur optio aliquid
-              </p>
+              <p className="font-inter  text-md antialiased text-justify m-3 leading-6 "></p>
             </div>
           </div>
-        ))}
+        ))} */}
       </div>
     </div>
   );
