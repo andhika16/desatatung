@@ -23,7 +23,7 @@ function Pagination(props) {
   return (
     <>
       {currentItems.map((news, index) => (
-        <div className="flex flex-col w-full  md:flex-row py-3" key={index}>
+        <div className="flex flex-col md:flex-row py-3" key={index}>
           <div className="max-w-auto object-contain">
             <div className="sm:w-full md:w-60 md:h-32   bg-cover overflow-hidden">
               {/* <img

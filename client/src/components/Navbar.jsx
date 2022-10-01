@@ -99,7 +99,9 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="my-4 ss:m-4 ">
-          <p>ppid</p>
+          <Link to="/lembagadesa">
+            <p>Lembaga Desa</p>
+          </Link>
         </div>
         <div className="my-4 ss:m-4 ">
           <p>transparansi keuangan</p>
