@@ -6,7 +6,7 @@ import Beranda from "./routes/Beranda";
 function App() {
   return (
     <div className="App">
-      <div className="md:mx-20">
+      <div className="lg:mx-20">
         <Navbar />
         <div className="w-[100%]  flex flex-col sm:flex-row sm:mx-5">
           <Beranda />

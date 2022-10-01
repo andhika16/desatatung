@@ -90,9 +90,7 @@ const Navbar = () => {
           <p>Beranda</p>
         </div>
         <Dropdown nama="bpbd" list={pemerintahan} />
-        <div className="my-4 ss:m-4 ">
-          <p>Pemerintahan Desa</p>
-        </div>
+        <Dropdown nama="pemerintahan desa" />
         <Dropdown nama="profil desa" />
         <div className="my-4 ss:m-4 ">
           <p>data desa</p>
