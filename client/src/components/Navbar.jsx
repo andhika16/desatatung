@@ -4,6 +4,7 @@ import loupe from "../assets/loupe.png";
 import Dropdown from "./Dropdown";
 import square from "../assets/square.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { ProfilDesa, pemerintahan, informasiPublik } from "./Link";
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
@@ -93,7 +94,9 @@ const Navbar = () => {
         <Dropdown nama="pemerintahan desa" />
         <Dropdown nama="profil desa" />
         <div className="my-4 ss:m-4 ">
-          <p>data desa</p>
+          <Link to="/strukturdesa">
+            <p>Struktur Desa</p>
+          </Link>
         </div>
         <div className="my-4 ss:m-4 ">
           <p>ppid</p>

@@ -2,6 +2,8 @@ import React from "react";
 import { useState, useEffect } from "react";
 import LoadingSpinner from "../components/LoadingSpinner";
 import Pagination from "../components/Pagination";
+import { Routes, Route } from "react-router-dom";
+import StrukturOrganisasi from "./pemerintah desa/StrukturOrganisasi";
 
 const Beranda = () => {
   const [isLoading, setLoading] = useState(true);
@@ -37,7 +39,10 @@ const Beranda = () => {
             berita terkini
           </p>
         </div>
-        <Pagination data={data} />
+        <Routes>
+          <Route path="/" element={<Pagination data={data} />} />
+          <Route path="/strukturdesa" element={<StrukturOrganisasi />} />
+        </Routes>
       </div>
     </div>
   );
