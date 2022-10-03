@@ -1,10 +1,14 @@
 import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import Pagination from "../../components/Pagination";
 const Home = () => {
   const url =
     "https://imdb8.p.rapidapi.com/actors/get-all-news?nconst=nm0001667";
 
+  const [isLoading, setLoading] = useState(true);
+  const [data, setShowData] = useState([]);
   const options = {
     method: "GET",
     headers: {

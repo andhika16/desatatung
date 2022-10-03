@@ -1,5 +1,4 @@
 import React from "react";
-import { useState, useEffect } from "react";
 
 import { Routes, Route, useParams } from "react-router-dom";
 import StrukturOrganisasi from "./pemerintah desa/StrukturOrganisasi";
