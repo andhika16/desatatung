@@ -88,7 +88,9 @@ const Navbar = () => {
         }  ss:flex flex-row  px-10 items-center  flex-wrap font-semibold capitalize`}
       >
         <div className="my-4 ss:m-4 ">
-          <p>Beranda</p>
+          <Link to="/">
+            <p>Beranda</p>
+          </Link>
         </div>
         <Dropdown nama="bpbd" list={pemerintahan} />
         <Dropdown nama="pemerintahan desa" />
