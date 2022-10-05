@@ -77,6 +77,9 @@ const Sidebar = () => {
             </div>
           </div>
         </div>
+        <div className="">
+          <SidebarHeading judul={"Sistem informasi"} />
+        </div>
       </div>
     </>
   );
