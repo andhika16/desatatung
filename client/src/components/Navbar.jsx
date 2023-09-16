@@ -5,12 +5,12 @@ import Dropdown from "./Dropdown";
 import square from "../assets/square.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ProfilDesa, pemerintahan, informasiPublik } from "./Link";
+import { ProfilDesa, pemerintahan, informasiPublik } from "../assets/Link";
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
   return (
     <nav>
-      <div className="w-full  bg-slate-800 flex flex-row py-2 px-10 flex-wrap">
+      <div className="w-full  bg-slate-800 flex flex-row py-2 px-2 flex-wrap">
         <div className="order-1 w-full sm:w-0 ss:hidden  flex flex-row py-2 items-center justify-between ">
           <div
             className="order-1 cursor-pointer"
@@ -63,7 +63,7 @@ const Navbar = () => {
                 alt="house"
               />
             </div>
-            <div className="font-inter uppercase text-white text-center ss:text-left">
+            <div className="uppercase text-white text-center ss:text-left">
               <h1 className="text-lg">Website resmi desa tatung</h1>
               <p className="text-sm">Kec.Balong Kab.Ponorogo</p>
             </div>
@@ -85,7 +85,7 @@ const Navbar = () => {
       <div
         className={`w-full pr-10  ${
           showNav ? "" : "hidden"
-        }  ss:flex flex-row  px-10 items-center  flex-wrap font-semibold capitalize`}
+        }  ss:flex flex-row  lg:px-10 items-center  flex-wrap  uppercase`}
       >
         <div className="my-4 ss:m-4 ">
           <p>Beranda</p>
