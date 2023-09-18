@@ -2,7 +2,7 @@ import React from "react";
 
 const loadingSpinner = () => {
   return (
-    <div className="w-full m-auto">
+    <div className="w-full m-auto justify-center place-items-center">
       <div role="status">
         <svg
           aria-hidden="true"

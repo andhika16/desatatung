@@ -52,32 +52,28 @@ const Navbar = () => {
               src={logoResident}
               alt="house"
             />
-          </div>
-        </div>
-        <div className="w-full sm:px-10 sm:py-5 flex flex-col justify-between ss:flex-row items-center">
-          <div className="flex flex-row items-center">
-            <div className="hidden ss:block w-[40px] h-[40px] ss:mr-5">
-              <img
-                className="w-full h-full object-contain"
-                src={logoResident}
-                alt="house"
-              />
-            </div>
+          <div className="">
             <div className="uppercase text-white text-center ss:text-left">
               <h1 className="text-lg">Website resmi desa tatung</h1>
               <p className="text-sm">Kec.Balong Kab.Ponorogo</p>
             </div>
           </div>
-          <div className="px-4 py-2 my-3 flex flex-row items-center bg-white ">
-            <div className="w-[20px] h-[20px]">
-              <img
-                src={loupe}
-                className="w-[100%] h-[100%] object-contain"
-                alt="loupe"
-              />
-            </div>
-            <div className="">
-              <input type="search" name="" id="" placeholder="cari" />
+          </div>
+          <div className="w-full flex ss:flex-row items-center">
+            <div className="flex flex-row items-center">
+              <div className="ss:block w-[40px] h-[40px] ss:mr-5">
+                <img
+                  className="hidden w-full h-full object-contain"
+                  src={logoResident}
+                  alt="house"
+                />
+              </div>
+              <div className="ss:block ">
+                <div className="uppercase text-white text-center ss:text-left">
+                  <h1 className="text-lg">Website resmi desa tatung</h1>
+                  <p className="text-sm">Kec.Balong Kab.Ponorogo</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -85,29 +81,29 @@ const Navbar = () => {
       <div
         className={`w-full pr-10  ${
           showNav ? "" : "hidden"
-        }  ss:flex flex-row  lg:px-10 items-center  flex-wrap  uppercase`}
+        }  ss:flex flex-row  px-4 lg:px-10 items-center lg:text-sm  flex-wrap  uppercase`}
       >
-        <div className="my-4 ss:m-4 ">
+        <div className="m-4 p-2">
           <p>Beranda</p>
         </div>
         <Dropdown nama="bpbd" list={pemerintahan} />
         <Dropdown nama="pemerintahan desa" />
         <Dropdown nama="profil desa" />
-        <div className="my-4 ss:m-4 ">
+        <div className="m-4 p-2 ">
           <Link to="/strukturdesa">
             <p>Struktur Desa</p>
           </Link>
         </div>
-        <div className="my-4 ss:m-4 ">
+        <div className="m-4 p-2">
           <p>ppid</p>
         </div>
-        <div className="my-4 ss:m-4 ">
+        <div className="m-4 p-2">
           <p>transparansi keuangan</p>
         </div>
-        <div className="my-4 ss:m-4 ">
+        <div className="m-4 p-2 ">
           <p>surat online</p>
         </div>
-        <div className="my-4 ss:m-4 ">
+        <div className="m-4 p-2 ">
           <p>login</p>
         </div>
       </div>
