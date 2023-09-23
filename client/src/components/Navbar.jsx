@@ -6,11 +6,13 @@ import square from "../assets/square.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ProfilDesa, pemerintahan, informasiPublik } from "../assets/Link";
+
+import { FaSearch } from "react-icons/fa";
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
   return (
-    <nav>
-      <div className="w-full  bg-slate-800 flex flex-row py-2 px-2 flex-wrap">
+    <nav className="sticky top-0">
+      <div className="w-full h-auto  bg-slate-900 flex flex-row py-2 px-2 flex-wrap">
         <div className="order-1 w-full sm:w-0 ss:hidden  flex flex-row py-2 items-center justify-between ">
           <div
             className="order-1 cursor-pointer"
@@ -46,47 +48,51 @@ const Navbar = () => {
               </svg>
             )}
           </div>
-          <div className="sm:block w-[40px] h-[40px] ">
-            <img
-              className="w-full h-full object-contain"
-              src={logoResident}
-              alt="house"
-            />
-          <div className="">
-            <div className="uppercase text-white text-center ss:text-left">
+          <div className="flex items-center w-full">
+            <div className="w-[8vw] h-auto">
+              <img
+                className="w-auto h-auto object-contain "
+                src={logoResident}
+                alt="house"
+              />
+            </div>
+            <div className="uppercase  text-white">
               <h1 className="text-lg">Website resmi desa tatung</h1>
               <p className="text-sm">Kec.Balong Kab.Ponorogo</p>
             </div>
           </div>
-          </div>
-          <div className="w-full flex ss:flex-row items-center">
-            <div className="flex flex-row items-center">
-              <div className="ss:block w-[40px] h-[40px] ss:mr-5">
-                <img
-                  className="hidden w-full h-full object-contain"
-                  src={logoResident}
-                  alt="house"
-                />
-              </div>
-              <div className="ss:block ">
-                <div className="uppercase text-white text-center ss:text-left">
-                  <h1 className="text-lg">Website resmi desa tatung</h1>
-                  <p className="text-sm">Kec.Balong Kab.Ponorogo</p>
-                </div>
+        </div>
+        <div className="hidden  w-full ss:flex ss:flex-row items-center justify-between">
+          <div className="flex flex-row items-center">
+            <div className="ss:block w-[40px] h-[40px] ss:mr-5">
+              <img
+                className="w-full h-full object-contain"
+                src={logoResident}
+                alt="house"
+              />
+            </div>
+            <div className="ss:block ">
+              <div className="uppercase  text-white ">
+                <h1 className="text-lg">Website resmi desa tatung</h1>
+                <p className="text-sm">Kec.Balong Kab.Ponorogo</p>
               </div>
             </div>
+          </div>
+          <div className="flex items-center">
+            <FaSearch className="" />
+            <input className="w-[20vw]" type="text" placeholder="cari" />
           </div>
         </div>
       </div>
       <div
-        className={`w-full pr-10  ${
+        className={`w-full pr-10 bg-white ${
           showNav ? "" : "hidden"
         }  ss:flex flex-row  px-4 lg:px-10 items-center lg:text-sm  flex-wrap  uppercase`}
       >
         <div className="m-4 p-2">
           <p>Beranda</p>
         </div>
-        <Dropdown nama="bpbd" list={pemerintahan} />
+        <Dropdown nama="bpbd"  />
         <Dropdown nama="pemerintahan desa" />
         <Dropdown nama="profil desa" />
         <div className="m-4 p-2 ">
@@ -101,10 +107,9 @@ const Navbar = () => {
           <p>transparansi keuangan</p>
         </div>
         <div className="m-4 p-2 ">
-          <p>surat online</p>
-        </div>
-        <div className="m-4 p-2 ">
-          <p>login</p>
+          <Link to="/layananpenduduk">
+          <p>layanan kependudukan</p>
+          </Link>
         </div>
       </div>
       <hr />

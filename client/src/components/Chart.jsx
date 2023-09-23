@@ -22,7 +22,7 @@ const ChartBar = () => {
   };
   return (
     <div>
-      <Bar data={state} />
+      <Bar  data={state} />
     </div>
   );
 };

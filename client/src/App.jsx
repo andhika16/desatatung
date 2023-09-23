@@ -1,8 +1,9 @@
 import Navbar from "./components/Navbar";
+import { NewsContext } from "./context/NewsContextComponent";
 import Headline from "./routes/HalamanUtama/Headline";
-import { BrowserRouter as Router } from "react-router-dom";
-const [isLoading, setLoading] = useState(true);
-const [data, setShowData] = useState([]);
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { useState, useEffect } from "react";
+import LayananPenduduk from "./routes/PemerintahDesa/LayananPenduduk";
 const url = "https://imdb8.p.rapidapi.com/actors/get-all-news?nconst=nm0001667";
 
 const options = {
@@ -13,25 +14,31 @@ const options = {
   },
 };
 
-useEffect(() => {
-  fetch(url, options)
-    .then((res) => res.json())
-    .then((json) => {
-      setShowData(json.items);
-      setLoading(false);
-    })
-    .catch((err) => console.error("error:" + err));
-}, []);
-
-if (isLoading) return <LoadingSpinner />;
 function App() {
+  const [showData, setShowData] = useState([]);
+
+  useEffect(() => {
+    fetch(url, options)
+      .then((res) => res.json())
+      .then((json) => {
+        setShowData(json.items);
+      })
+      .catch((err) => console.error("error:" + err));
+  }, []);
+
   return (
-    <Router>
-        <div className="App">
+    <NewsContext.Provider value={{ news: showData }}>
+      <div className="App">
+        <Router>
+          <div id="content"></div>
           <Navbar />
-          <Headline />
-        </div>
-    </Router>
+          <Routes>
+            <Route path="/" element={<Headline />} />
+            <Route path="/layananpenduduk" element={<LayananPenduduk />} />
+          </Routes>
+        </Router>
+      </div>
+    </NewsContext.Provider>
   );
 }
 

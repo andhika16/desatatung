@@ -14,6 +14,9 @@ module.exports = {
         poppins: ["Poppins"],
         inter: ["inter", "sans-serif"],
       },
+      lineClamp: {
+        7: '7',
+      },
     },
     screens: {
       xs: "480px",

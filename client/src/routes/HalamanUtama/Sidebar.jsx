@@ -1,58 +1,48 @@
 import React from "react";
 import {
   FaChartArea,
-  FaFacebook,
-  FaFacebookMessenger,
   FaFolder,
   FaGlobe,
   FaInfo,
-  FaInstagram,
-  FaNetworkWired,
-  FaPeopleArrows,
-  FaPeopleCarry,
-  FaPhone,
-  FaTwitter,
   FaUser,
-  FaWhatsapp,
 } from "react-icons/fa";
-import wa from "../../assets/whatsapp.png";
-import phone from "../../assets/telephone-call.png";
-import ChartBar from "../../components/Chart";
+import dadu from "../../assets/dad.png";
 import SidebarHeading from "../../components/SidebarHeading";
 const Sidebar = () => {
   return (
     <>
-      <div className="w-full">
+      <div className="w-lg">
         <div>
           <p className=" text-lg font-semibold uppercase text-center">
             Informasi desa
           </p>
         </div>
-        <div className="p-2  my-2">
+        <div className="p-2 ">
           <SidebarHeading judul={"Sistem informasi"} icon={<FaInfo />} />
+          <p className="p-2">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi amet
+            cum dignissimos nam corporis, laudantium tempora vero fugit
+            voluptatibus repudiandae!
+          </p>
         </div>
-        <div className="p-2  my-2">
-          <SidebarHeading judul={"layanan informasi"} icon={<FaFolder/>} />
-          <div className="object-contain">
-            
+        <div className="p-2">
+          <SidebarHeading judul={"layanan informasi"} icon={<FaFolder />} />
+          <div className="object-contain w-[10vw] ">
+            <img src={dadu}  className="w-full h-full"/>
           </div>
         </div>
-        {/* <div className=" p-2">
+        <div className=" p-2">
           <SidebarHeading judul={"statistik desa"} icon={<FaChartArea />} />
-          <div className="">
-            <ChartBar />
-          </div>
-        </div> */}
+          <div className="">{/* <ChartBar /> */}</div>
+        </div>
         <div className="p-2">
           <SidebarHeading judul={"aparatur desa"} icon={<FaUser />} />
           <div className=""></div>
         </div>
         <div className="p-2">
           <SidebarHeading judul={"social media"} icon={<FaGlobe />} />
-          <div className="mt-5 ">
-          </div>
+          <div className="mt-5 "></div>
         </div>
-      
       </div>
     </>
   );
