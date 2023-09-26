@@ -28,11 +28,9 @@ const LayananPenduduk = () => {
             />
           ))}
         </div>
-        <div className="sm:w-1/4 mx-2 p-5 shadow-md bg-slate-50">
-          <div className="">
-            <h1 className="text-lg font-bold">Pengumuman</h1>
-          </div>
-          <div className="">
+        <div className="sm:w-1/4 mx-2 p-5 ">
+          <div className="border">
+            <h1 className="text-lg font-bold ">Pengumuman</h1>
             <h3>Musyawarah Desa</h3>
             <h3>Musyawarah Desa</h3>
             <h3>Musyawarah Desa</h3>

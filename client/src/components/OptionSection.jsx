@@ -7,31 +7,31 @@ import clipboard from "../assets/clipboard.png";
 const OptionSection = () => {
   return (
     <div>
-      <div className="w-full p-5 bg-green-200 ">
-        <div className="flex ">
-          <div className="w-full flex flex-col  items-center justify-center  m-2">
-            <div className="w-[6vw] h-auto  items-center">
+      <div className="w-full p-5  ">
+        <div className="sm:flex ">
+          <div className="w-full flex flex-col  items-center justify-center my-5 sm:m-2 ">
+            <div className="w-[10vw] sm:w-[6vw] h-auto my-2 items-center">
               <img src={clipboard} className="w-full h-auto" alt="" />
             </div>
-            <p className="font-bold">Pembangunan</p>
+            <p className="text-gray-500 text-sm font-poppins">Informasi</p>
           </div>
-          <div className="w-full flex flex-col  items-center justify-center  m-2">
-            <div className="w-[6vw] h-auto  items-center">
+          <div className="w-full flex flex-col  items-center justify-center my-5 sm:m-2 ">
+            <div className="w-[10vw] sm:w-[6vw] h-auto my-2 items-center">
               <img src={developoing} className="w-full h-auto" alt="" />
             </div>
-            <p className="font-bold">Pembangunan</p>
+            <p className="text-gray-500 text-sm font-poppins">Potensi Desa</p>
           </div>
-          <div className="w-full flex flex-col  items-center justify-center  m-2">
-            <div className="w-[6vw] h-auto  items-center">
+          <div className="w-full flex flex-col  items-center justify-center my-5 sm:m-2 ">
+            <div className="w-[10vw] sm:w-[6vw] h-auto my-2 items-center">
               <img src={dollar} className="w-full h-auto" alt="" />
             </div>
-            <p className="font-bold">Pembangunan</p>
+            <p className="text-gray-500 text-sm font-poppins">keuangan</p>
           </div>
-          <div className="w-full flex flex-col  items-center justify-center  m-2">
-            <div className="w-[6vw] h-auto  items-center">
+          <div className="w-full flex flex-col  items-center justify-center my-5 sm:m-2 ">
+            <div className="w-[10vw] sm:w-[6vw] h-auto my-2 items-center">
               <img src={barchat} className="w-full h-auto" alt="" />
             </div>
-            <p className="font-bold">Pembangunan</p>
+            <p className="text-gray-500 text-sm font-poppins">Pembangunan Desa</p>
           </div>
         </div>
       </div>

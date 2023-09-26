@@ -1,12 +1,8 @@
 import React from "react";
 import logoResident from "../assets/house.png";
-import loupe from "../assets/loupe.png";
 import Dropdown from "./Dropdown";
-import square from "../assets/square.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ProfilDesa, pemerintahan, informasiPublik } from "../assets/Link";
-
 import { FaSearch } from "react-icons/fa";
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
@@ -87,28 +83,42 @@ const Navbar = () => {
       <div
         className={`w-full pr-10 bg-white ${
           showNav ? "" : "hidden"
-        }  ss:flex flex-row  px-4 lg:px-10 items-center lg:text-sm  flex-wrap  uppercase`}
+        }  ss:flex flex-row  px-4 lg:px-10 items-center md:text-xs  flex-wrap font-semibold uppercase`}
       >
-        <div className="m-4 p-2">
+        <div className="flex items-center w-full">
+          <div className="w-[5vw] h-auto mr-5">
+            <img
+              className="w-auto h-auto object-contain "
+              src={logoResident}
+              alt="house"
+            />
+          </div>
+          <div className="uppercase  ">
+            <h1 className="text-lg">Website resmi desa tatung</h1>
+            <p className="text-sm">Kec.Balong Kab.Ponorogo</p>
+          </div>
+        </div>
+
+        <div className="m-2 p-2">
           <p>Beranda</p>
         </div>
-        <Dropdown nama="bpbd"  />
+        <Dropdown nama="bpbd" />
         <Dropdown nama="pemerintahan desa" />
         <Dropdown nama="profil desa" />
-        <div className="m-4 p-2 ">
+        <div className="m-2 p-2 ">
           <Link to="/strukturdesa">
             <p>Struktur Desa</p>
           </Link>
         </div>
-        <div className="m-4 p-2">
+        <div className="m-2 p-2">
           <p>ppid</p>
         </div>
-        <div className="m-4 p-2">
+        <div className="m-2 p-2">
           <p>transparansi keuangan</p>
         </div>
-        <div className="m-4 p-2 ">
+        <div className="m-2 p-2 ">
           <Link to="/layananpenduduk">
-          <p>layanan kependudukan</p>
+            <p>layanan kependudukan</p>
           </Link>
         </div>
       </div>

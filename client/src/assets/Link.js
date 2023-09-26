@@ -1,7 +1,7 @@
-import cr1 from "./carouselone.jpg";
-import cr2 from "./carouseltwo.jpg";
-import cr3 from "./carouselthree.jpg";
-import cr4 from "./carouselfour.jpg";
+import cr1 from "./pict1.jpg";
+import cr2 from "./pict2.jpg";
+import cr3 from "./pict3.jpg";
+import cr4 from "./pict4.jpg";
 
 export const ProfilDesa = [
   {

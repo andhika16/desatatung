@@ -20,9 +20,6 @@ const Dropdown = ({nama}) => {
 
       <div className="ss:absolute  z-10 hidden bg-grey-200 group-hover:block ">
         <div className="px-2 pt-2 pb-4 bg-white  shadow-lg w-[80px] text-center">
-          <p>ass</p>
-          <p>ass</p>
-          <p>ass</p>
         </div>
       </div>
     </div>

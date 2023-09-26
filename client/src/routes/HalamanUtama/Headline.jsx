@@ -4,7 +4,6 @@ import Carousel from "../../components/Carousel";
 const Headline = () => {
   return (
     <>
-      <Carousel />
       <Content />
     </>
   );

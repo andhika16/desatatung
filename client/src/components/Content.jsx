@@ -5,6 +5,7 @@ import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import OptionSection from "./OptionSection";
 import SidebarHeading from "./SidebarHeading";
 import Sidebar from "../routes/HalamanUtama/Sidebar";
+import Carousel from "./Carousel";
 function Pagination() {
   const { news } = useContext(NewsContext);
   const data = news;
@@ -28,12 +29,13 @@ function Pagination() {
     <>
       <div className="">
         <div className="">
+          <Carousel />
           <OptionSection />
           <div className="">
-            <h1 className="text-4xl font-semibold  text-center">Kabar Desa</h1>
+            <h1 className="text-lg font-semibold  text-center">KABAR DESA</h1>
           </div>
           <div className="sm:flex">
-            <div className="grid sm:grid-cols-3 gap-2">
+            <div className="grid sm:grid-cols-3 gap-2  ">
               {currentItems.map((news, index) => (
                 <div
                   className="flex flex-col sm:max-w-6xl  p-2 my-2 sm:m-2 "
