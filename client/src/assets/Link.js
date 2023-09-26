@@ -1,3 +1,8 @@
+import cr1 from "./carouselone.jpg";
+import cr2 from "./carouseltwo.jpg";
+import cr3 from "./carouselthree.jpg";
+import cr4 from "./carouselfour.jpg";
+
 export const ProfilDesa = [
   {
     id: 1,
@@ -93,5 +98,29 @@ export const layanan = [
     tanggal: "2021-09-01",
     img: "../../assets/ex.jpeg",
     isi: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque rerum in itaque aut laborum nobis iure sed, quibusdam animi quidem eligendi enim deleniti? Earum odio ratione quae, ipsum dignissimos praesentium officia nisi animi labore quidem culpa rerum corrupti veniam odit ut ea excepturi doloribus perspiciatis.",
+  },
+];
+
+export const carousel = [
+  {
+    id: 1,
+    title: "First slide label",
+    img: cr1,
+  },
+
+  {
+    id: 2,
+    title: "second slide label",
+    img: cr2,
+  },
+  {
+    id: 3,
+    title: "third slide label",
+    img: cr3,
+  },
+  {
+    id: 4,
+    title: "Fourth slide label",
+    img: cr4,
   },
 ];

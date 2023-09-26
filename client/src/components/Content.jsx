@@ -2,6 +2,9 @@ import ReactPaginate from "react-paginate";
 import { NewsContext } from "../context/NewsContextComponent";
 import { useContext, useState, useEffect } from "react";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
+import OptionSection from "./OptionSection";
+import SidebarHeading from "./SidebarHeading";
+import Sidebar from "../routes/HalamanUtama/Sidebar";
 function Pagination() {
   const { news } = useContext(NewsContext);
   const data = news;
@@ -25,51 +28,55 @@ function Pagination() {
     <>
       <div className="">
         <div className="">
-          <h1 className=" text-4xl font-semibold  text-center">
-            Kabar Desa
-          </h1>
-        </div>
-        <div className="grid sm:grid-cols-3 gap-2">
-          {currentItems.map((news, index) => (
-            <div
-              className="flex flex-col sm:max-w-6xl  p-2 my-2 sm:m-2 "
-              key={index}
-            >
-              <div className="items-center bg-cover overflow-hidden">
-                <img
-                  className="w-full sm:h-[30vh] object-cover"
-                  src={news.image.url}
-                  alt={news.image.id}
-                />
-              </div>
-              <div className=" w-auto ">
-                <p
-                  className="font-inter sm:my-0  sm:text-left sm:text-lg"
-                  style={{
-                    display: "-webkit-box",
-                    WebkitBoxOrient: "vertical",
-                    WebkitLineClamp: 3,
-                    overflow: "hidden",
-                  }}
+          <OptionSection />
+          <div className="">
+            <h1 className="text-4xl font-semibold  text-center">Kabar Desa</h1>
+          </div>
+          <div className="sm:flex">
+            <div className="grid sm:grid-cols-3 gap-2">
+              {currentItems.map((news, index) => (
+                <div
+                  className="flex flex-col sm:max-w-6xl  p-2 my-2 sm:m-2 "
+                  key={index}
                 >
-                  {news.head}
-                </p>
-                <p
-                  className="hidden font-roboto text-sm sm:text-md antialiased "
-                  // mengambil sebagaian paraghrap pada text body
-                  style={{
-                    display: "-webkit-box",
-                    WebkitBoxOrient: "vertical",
-                    WebkitLineClamp: 3,
-                    overflow: "hidden",
-                  }}
-                >
-                  {/* {news.body} */}
-                </p>
-                {/* <span className="text-blue-800">Selengkapnya</span> */}
-              </div>
+                  <div className="items-center bg-cover overflow-hidden">
+                    <img
+                      className="w-full sm:h-[30vh] object-cover"
+                      src={news.image.url}
+                      alt={news.image.id}
+                    />
+                  </div>
+                  <div className=" w-auto ">
+                    <p
+                      className="font-inter sm:my-0  sm:text-left sm:text-lg"
+                      style={{
+                        display: "-webkit-box",
+                        WebkitBoxOrient: "vertical",
+                        WebkitLineClamp: 3,
+                        overflow: "hidden",
+                      }}
+                    >
+                      {news.head}
+                    </p>
+                    <p
+                      className="hidden font-roboto text-sm sm:text-md antialiased "
+                      // mengambil sebagaian paraghrap pada text body
+                      style={{
+                        display: "-webkit-box",
+                        WebkitBoxOrient: "vertical",
+                        WebkitLineClamp: 3,
+                        overflow: "hidden",
+                      }}
+                    >
+                      {/* {news.body} */}
+                    </p>
+                    {/* <span className="text-blue-800">Selengkapnya</span> */}
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+            <Sidebar />
+          </div>
         </div>
         <ReactPaginate
           breakLabel="..."
