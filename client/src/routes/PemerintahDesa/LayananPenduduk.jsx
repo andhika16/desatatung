@@ -2,7 +2,8 @@ import React from "react";
 import Card from "../../components/Card";
 import { layanan } from "../../assets/Link";
 import img from "../../assets/ex.jpeg";
-import Sidebar from "../HalamanUtama/Sidebar";
+import SidebarHeading from "../../components/SidebarHeading";
+import OptionSection from "../../components/OptionSection";
 
 const LayananPenduduk = () => {
   return (
@@ -29,12 +30,10 @@ const LayananPenduduk = () => {
           ))}
         </div>
         <div className="sm:w-1/4 mx-2 p-5 ">
-          <div className="border">
-            <h1 className="text-lg font-bold ">Pengumuman</h1>
-            <h3>Musyawarah Desa</h3>
-            <h3>Musyawarah Desa</h3>
-            <h3>Musyawarah Desa</h3>
-          </div>
+          <p className="bg-slate-800 text-white font-semibold p-2 rounded">Pengumuman</p>
+          <SidebarHeading judul={"Pendaftaran Kartu Prakerja"} />
+          <SidebarHeading judul={"Pendaftaran Informasi KK"} />
+          <SidebarHeading judul={"Informasi Bantuan"} />
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import dollar from "../assets/dollar.png";
 import barchat from "../assets/bar-chart.png";
 import clipboard from "../assets/clipboard.png";
 
-const OptionSection = () => {
+const OptionSection = ({style}) => {
   return (
     <div>
       <div className="w-full p-5  ">

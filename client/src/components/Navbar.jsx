@@ -85,19 +85,6 @@ const Navbar = () => {
           showNav ? "" : "hidden"
         }  ss:flex flex-row  px-4 lg:px-10 items-center md:text-xs  flex-wrap font-semibold uppercase`}
       >
-        <div className="flex items-center w-full">
-          <div className="w-[5vw] h-auto mr-5">
-            <img
-              className="w-auto h-auto object-contain "
-              src={logoResident}
-              alt="house"
-            />
-          </div>
-          <div className="uppercase  ">
-            <h1 className="text-lg">Website resmi desa tatung</h1>
-            <p className="text-sm">Kec.Balong Kab.Ponorogo</p>
-          </div>
-        </div>
 
         <div className="m-2 p-2">
           <p>Beranda</p>
