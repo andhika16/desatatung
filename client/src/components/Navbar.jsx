@@ -85,7 +85,6 @@ const Navbar = () => {
           showNav ? "" : "hidden"
         }  ss:flex flex-row  px-4 lg:px-10 items-center md:text-xs  flex-wrap font-semibold uppercase`}
       >
-
         <div className="m-2 p-2">
           <p>Beranda</p>
         </div>
@@ -98,7 +97,9 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="m-2 p-2">
-          <p>ppid</p>
+          <Link to="/pertanian">
+            <p>Pertanian</p>
+          </Link>
         </div>
         <div className="m-2 p-2">
           <p>transparansi keuangan</p>

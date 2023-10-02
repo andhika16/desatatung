@@ -3,9 +3,10 @@ import { NewsContext } from "../context/NewsContextComponent";
 import { useContext, useState, useEffect } from "react";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import OptionSection from "./OptionSection";
-import SidebarHeading from "./SidebarHeading";
 import Sidebar from "../routes/HalamanUtama/Sidebar";
 import Carousel from "./Carousel";
+import { galeri } from "../assets/Link";
+import SidebarHeading from "./SidebarHeading";
 function Pagination() {
   const { news } = useContext(NewsContext);
   const data = news;
@@ -77,6 +78,7 @@ function Pagination() {
                 </div>
               ))}
             </div>
+
             <Sidebar />
           </div>
         </div>
@@ -94,6 +96,30 @@ function Pagination() {
           nextLinkClassName="font-roboto font-bold "
           activeLinkClassName="active p-2 rounded text-white bg-slate-400"
         />
+      </div>
+      <div className="mt-5">
+        <div className="m-2">
+          <SidebarHeading judul={"galeri desa tatung"} />
+        </div>
+        <div className="flex flex-col sm:flex-row absolute">
+          {galeri.map((galeri, index) => (
+            <div key={index} className="m-5">
+              <div className="sm:w-[20vw] sm:h-[15vw] ">
+                <img
+                  className="w-full h-full object-cover"
+                  src={galeri.img}
+                  alt=""
+                />
+              </div>
+              <div className="relative bg-slate-400 text-white uppercase p-3 top-[-10%]">
+                <p>{galeri.judul}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15806.896464944157!2d111.41796678261024!3d-7.923857873067884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7975757a7cacf3%3A0x36709874859b2d68!2sTatung%2C%20Kec.%20Balong%2C%20Kabupaten%20Ponorogo%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1696238729572!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
       </div>
     </>
   );

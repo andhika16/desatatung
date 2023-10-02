@@ -11,7 +11,6 @@ const Card = ({ judul, tanggal, isi, img }) => {
           <p className="font-bold text-lg ">{judul}</p>
           <span>{tanggal}</span>
           <p className="text-sm text-ellipsis overflow-hidden">{isi}</p>
-          <button className="bg-slate-800  text-white text-xs p-1 rounded-md">Selengkapnya</button>
         </div>
       </div>  
     </div>

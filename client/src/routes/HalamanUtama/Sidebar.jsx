@@ -21,8 +21,11 @@ const Sidebar = () => {
         </div>
       </div>
       <div className="p-2 ">
-        <SidebarHeading judul={"statistik desa"} icon={<FaChartArea />} />
-        <div className=""></div>
+        <SidebarHeading judul={"Agenda Kegiatan "} icon={<FaChartArea />} />
+        <div className="flex w-full">
+          <span className="p-1 mx-2 bg-slate-900 text-white rounded">Sep 23 2023</span>
+          <p>Musyawarah Pengukuran Tanah</p>
+        </div>
       </div>
       <div className="p-2 ">
         <SidebarHeading judul={"aparatur desa"} icon={<FaUser />} />

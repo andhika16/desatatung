@@ -4,6 +4,7 @@ import Headline from "./routes/HalamanUtama/Headline";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 import LayananPenduduk from "./routes/PemerintahDesa/LayananPenduduk";
+import Pertanian from "./routes/PemerintahDesa/Pertanian";
 const url = "https://imdb8.p.rapidapi.com/actors/get-all-news?nconst=nm0001667";
 
 const options = {
@@ -35,6 +36,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Headline />} />
             <Route path="/layananpenduduk" element={<LayananPenduduk />} />
+            <Route path="/pertanian" element={<Pertanian />} />
           </Routes>
         </Router>
       </div>
