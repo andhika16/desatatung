@@ -5,7 +5,7 @@ import dadu from "../../assets/dad.png";
 import SidebarHeading from "../../components/SidebarHeading";
 const Sidebar = () => {
   return (
-    <div className="w-lg">
+    <div className="sm:w-1/3">
       <div className="p-2 ">
         <SidebarHeading judul={"Sistem informasi"} icon={<FaInfo />} />
         <p className="p-2">

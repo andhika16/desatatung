@@ -1,5 +1,6 @@
 import React from "react";
 import logoResident from "../assets/house.png";
+import drop from "../assets/down-arrow.png";
 import Dropdown from "./Dropdown";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -7,8 +8,8 @@ import { FaSearch } from "react-icons/fa";
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
   return (
-    <nav className="sticky top-0">
-      <div className="w-full h-auto  bg-slate-900 flex flex-row py-2 px-2 flex-wrap">
+    <nav className="lg:sticky top-0">
+      <div className="w-full h-auto   bg-slate-900 flex flex-row py-2 px-2 flex-wrap">
         <div className="order-1 w-full sm:w-0 ss:hidden  flex flex-row py-2 items-center justify-between ">
           <div
             className="order-1 cursor-pointer"
@@ -83,12 +84,42 @@ const Navbar = () => {
       <div
         className={`w-full pr-10 bg-white ${
           showNav ? "" : "hidden"
-        }  ss:flex flex-row  px-4 lg:px-10 items-center md:text-xs  flex-wrap font-semibold uppercase`}
+        }  ss:flex flex-row  px-4 lg:px-10  items-center md:text-xs  flex-wrap font-semibold uppercase`}
       >
         <div className="m-2 p-2">
-          <p>Beranda</p>
+          <Link to={"/"}>Beranda</Link>
         </div>
-        <Dropdown nama="bpbd" />
+        <div className="">  
+          <div className="relative group m-4 ">
+            <div className="flex flex-row items-center">
+              <div className="flex flex-row ">
+                <p>Profil</p>
+              </div>
+
+              <div className="w-[35px] h-[35px]">
+                <img
+                  className="w-[100%] h-[100%] object-contain"
+                  src={drop}
+                  alt="drop"
+                />
+              </div>
+            </div>
+
+            <div className="ss:absolute  z-10 hidden bg-grey-200 group-hover:block ">
+              <div className="px-2 pt-2 pb-4 bg-white  shadow-lg w-[80px] text-center">
+                <Link>
+                  <p>Sejarah</p>
+                </Link>
+                <Link>
+                  <p>visi misi</p>
+                </Link>
+                <Link>
+                  <p>peraturan</p>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
         <Dropdown nama="pemerintahan desa" />
         <Dropdown nama="profil desa" />
         <div className="m-2 p-2 ">
@@ -100,9 +131,6 @@ const Navbar = () => {
           <Link to="/pertanian">
             <p>Pertanian</p>
           </Link>
-        </div>
-        <div className="m-2 p-2">
-          <p>transparansi keuangan</p>
         </div>
         <div className="m-2 p-2 ">
           <Link to="/layananpenduduk">

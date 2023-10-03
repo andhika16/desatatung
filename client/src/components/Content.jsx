@@ -14,7 +14,7 @@ function Pagination() {
   const [pageCount, setPageCount] = useState(0);
 
   const [itemOffset, setItemOffset] = useState(0);
-  const ItemsPerPage = 7;
+  const ItemsPerPage = 3;
 
   useEffect(() => {
     const endOffset = itemOffset + ItemsPerPage;
@@ -36,22 +36,22 @@ function Pagination() {
             <h1 className="text-lg font-semibold  text-center">KABAR DESA</h1>
           </div>
           <div className="sm:flex">
-            <div className="grid sm:grid-cols-3 gap-2  ">
+            <div className="flex flex-col">
               {currentItems.map((news, index) => (
                 <div
-                  className="flex flex-col sm:max-w-6xl  p-2 my-2 sm:m-2 "
+                  className="flex flex-row sm:max-w-6xl  p-2 my-2 sm:m-2 "
                   key={index}
                 >
-                  <div className="items-center bg-cover overflow-hidden">
+                  <div className="items-center bg-cover overflow-hidden ">
                     <img
-                      className="w-full sm:h-[30vh] object-cover"
+                      className="w-[40vw] sm:h-[30vh] object-cover"
                       src={news.image.url}
                       alt={news.image.id}
                     />
                   </div>
-                  <div className=" w-auto ">
+                  <div className=" max-w-sm mx-5">
                     <p
-                      className="font-inter sm:my-0  sm:text-left sm:text-lg"
+                      className=" font-bold  sm:my-0  sm:text-left sm:text-lg"
                       style={{
                         display: "-webkit-box",
                         WebkitBoxOrient: "vertical",
@@ -71,7 +71,7 @@ function Pagination() {
                         overflow: "hidden",
                       }}
                     >
-                      {/* {news.body} */}
+                      {news.body}
                     </p>
                     {/* <span className="text-blue-800">Selengkapnya</span> */}
                   </div>
@@ -97,13 +97,13 @@ function Pagination() {
           activeLinkClassName="active p-2 rounded text-white bg-slate-400"
         />
       </div>
-      <div className="mt-5">
+      <div className="mt-5 bg-slate-100">
         <div className="m-2">
           <SidebarHeading judul={"galeri desa tatung"} />
         </div>
-        <div className="flex flex-col sm:flex-row absolute">
+        <div className="flex flex-col sm:flex-row ">
           {galeri.map((galeri, index) => (
-            <div key={index} className="m-5">
+            <div key={index} className="m-2">
               <div className="sm:w-[20vw] sm:h-[15vw] ">
                 <img
                   className="w-full h-full object-cover"
@@ -118,7 +118,6 @@ function Pagination() {
           ))}
         </div>
         <div className="">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15806.896464944157!2d111.41796678261024!3d-7.923857873067884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7975757a7cacf3%3A0x36709874859b2d68!2sTatung%2C%20Kec.%20Balong%2C%20Kabupaten%20Ponorogo%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1696238729572!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </>

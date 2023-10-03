@@ -7,17 +7,23 @@ const Pertanian = () => {
     <div>
       <div className="flex flex-col">
         <div className="bg-slate-900 text-white">
-          <SidebarHeading judul={"layanan penduduk"} />
+          <SidebarHeading judul={"pertanian"} />
         </div>
         <div className="sm:flex flex-row justify-between">
-          <div className="flex flex-col">
+          <div className="flex flex-col m-5">
             {pertanian.map((layanan, index) => (
-              <Card
+              <div
                 key={index}
-                judul={layanan.nama}
-                isi={layanan.isi}
-                img={layanan.img}
-              />
+                className="border rounded  sm:flex flex-row m-2 p-2"
+              >
+                <div className=" sm:w-[30vw] h-[40vh] sm:h-[30vh] border rounded m-4 ">
+                  <img className="object-cover w-full h-full" src={layanan.img} alt="" />
+                </div>
+                <div className="p-3 m-3 max-w-lg">
+                  <p className="font-bold">{layanan.nama}</p>
+                  <p className="">{layanan.isi}</p>
+                </div>
+              </div>
             ))}
           </div>
           <div className="sm:w-1/4 mx-2 p-5">
