@@ -7,11 +7,11 @@ import OptionSection from "../../components/OptionSection";
 
 const LayananPenduduk = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col ">
       <div className="bg-slate-900 text-white">
         <SidebarHeading judul={"layanan penduduk"} />
       </div>
-      <div className="sm:flex flex-row justify-between">
+      <div className="sm:flex flex-row justify-between p-10">
         <div className="flex flex-col">
           {layanan.map((layanan, index) => (
             <Card

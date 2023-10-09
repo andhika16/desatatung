@@ -188,3 +188,19 @@ export const galeri = [
     img: gal4,
   },
 ];
+
+
+const perangkat = [
+  {
+    id: 1,
+    jabatan: "Kepala Desa",
+    nama: "Rudi Bastio S.pd",
+    img: "../../assets/kepaladesa.jpeg",
+  },
+  {
+    id: 2,
+    jabatan: "Sekretaris Desa",
+    nama: "Latif S.se",
+    img: "../../assets/sekretaris.jpeg",
+  }
+]

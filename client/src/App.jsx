@@ -5,7 +5,11 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 import LayananPenduduk from "./routes/PemerintahDesa/LayananPenduduk";
 import Pertanian from "./routes/PemerintahDesa/Pertanian";
+import Perangkat from "./routes/PemerintahDesa/Perangkat";
 import Footer from "./components/Footer";
+import StrukturDesa from "./routes/PemerintahDesa/StrukturDesa";
+import Tentang from "./routes/ProfilDesa/Tentang";
+import LembagaDesa from "./routes/PemerintahDesa/LembagaDesa";
 const url = "https://imdb8.p.rapidapi.com/actors/get-all-news?nconst=nm0001667";
 
 const options = {
@@ -38,6 +42,11 @@ function App() {
             <Route path="/" element={<Headline />} />
             <Route path="/layananpenduduk" element={<LayananPenduduk />} />
             <Route path="/pertanian" element={<Pertanian />} />
+            <Route path="/strukturdesa" element={<StrukturDesa />} />
+            <Route path="/tentang" element={<Tentang />} />
+            <Route path="/lembagadesa" element={<LembagaDesa />} />
+            <Route path="/perangkat" element={<Perangkat />} />
+            
           </Routes>
           <Footer />
         </Router>

@@ -21,7 +21,7 @@ const Pertanian = () => {
                 </div>
                 <div className="p-3 m-3 max-w-lg">
                   <p className="font-bold">{layanan.nama}</p>
-                  <p className="">{layanan.isi}</p>
+                  <p className="text-base font-light leading-relaxed mt-0 mb-4">{layanan.isi}</p>
                 </div>
               </div>
             ))}

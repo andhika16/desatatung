@@ -8,7 +8,7 @@ import { FaSearch } from "react-icons/fa";
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
   return (
-    <nav className="lg:sticky top-0">
+    <nav className="">
       <div className="w-full h-auto   bg-slate-900 flex flex-row py-2 px-2 flex-wrap">
         <div className="order-1 w-full sm:w-0 ss:hidden  flex flex-row py-2 items-center justify-between ">
           <div
@@ -106,21 +106,48 @@ const Navbar = () => {
             </div>
 
             <div className="ss:absolute  z-10 hidden bg-grey-200 group-hover:block ">
-              <div className="px-2 pt-2 pb-4 bg-white  shadow-lg w-[80px] text-center">
+              <div className="px-2 pt-2 pb-4 bg-white rounded border  shadow-lg  text-center">
                 <Link>
                   <p>Sejarah</p>
                 </Link>
                 <Link>
                   <p>visi misi</p>
                 </Link>
-                <Link>
-                  <p>peraturan</p>
+                <Link to={"/tentang"}>
+                  <p>Tentang</p>
                 </Link>
               </div>
             </div>
           </div>
         </div>
-        <Dropdown nama="pemerintahan desa" />
+        <div className="">  
+          <div className="relative group m-4 ">
+            <div className="flex flex-row items-center">
+              <div className="flex flex-row ">
+                <p>Pemerintah Desa</p>
+              </div>
+
+              <div className="w-[35px] h-[35px]">
+                <img
+                  className="w-[100%] h-[100%] object-contain"
+                  src={drop}
+                  alt="drop"
+                />
+              </div>
+            </div>
+
+            <div className="ss:absolute  z-10 hidden bg-grey-200 group-hover:block ">
+              <div className="px-2 pt-2 pb-4 bg-white rounded border  shadow-lg  text-center">
+                <Link to={"/lembagadesa"}>
+                  <p>Lembaga Desa</p>
+                </Link>
+                <Link to={"/perangkat"}>
+                  <p>Perangkat</p>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
         <Dropdown nama="profil desa" />
         <div className="m-2 p-2 ">
           <Link to="/strukturdesa">
