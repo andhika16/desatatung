@@ -32,54 +32,41 @@ function Pagination() {
         <div className="">
           <Carousel />
           <OptionSection />
-          <div className="">
-            <h1 className="text-lg font-semibold  text-center">KABAR DESA</h1>
-          </div>
-          <div className="sm:flex">
-            <div className="flex flex-col">
-              {currentItems.map((news, index) => (
-                <div
-                  className="flex flex-row sm:max-w-6xl  p-2 my-2 sm:m-2 "
-                  key={index}
-                >
-                  <div className="items-center bg-cover overflow-hidden ">
-                    <img
-                      className="w-[40vw] sm:h-[30vh] object-cover"
-                      src={news.image.url}
-                      alt={news.image.id}
-                    />
-                  </div>
-                  <div className=" max-w-sm mx-5">
-                    <p
-                      className=" font-bold  sm:my-0  sm:text-left sm:text-lg"
-                      style={{
-                        display: "-webkit-box",
-                        WebkitBoxOrient: "vertical",
-                        WebkitLineClamp: 3,
-                        overflow: "hidden",
-                      }}
-                    >
-                      {news.head}
-                    </p>
-                    <p
-                      className="hidden font-roboto text-sm sm:text-md antialiased "
-                      // mengambil sebagaian paraghrap pada text body
-                      style={{
-                        display: "-webkit-box",
-                        WebkitBoxOrient: "vertical",
-                        WebkitLineClamp: 3,
-                        overflow: "hidden",
-                      }}
-                    >
-                      {news.body}
-                    </p>
-                    {/* <span className="text-blue-800">Selengkapnya</span> */}
-                  </div>
-                </div>
-              ))}
+          <div className="px-5">
+            <div className="mt-10 ">
+              <h1 className="text-lg font-semibold  ">KABAR DESA</h1>
             </div>
-
-            <Sidebar />
+            <div className="sm:flex ">
+              <div className="flex flex-col">
+                {currentItems.map((news, index) => (
+                  <div
+                    className="sm:flex flex-row sm:max-w-6xl  my-2  "
+                    key={index}
+                  >
+                    <div className="sm:w-[40vw] sm:h-[30vh] items-center bg-cover overflow-hidden ">
+                      <img
+                        className="w-full h-full object-cover"
+                        src={news.image.url}
+                        alt={news.image.id}
+                      />
+                    </div>
+                    <div className="sm:max-w-sm sm:mx-5">
+                      <p className=" font-semibold  text-blue-800  sm:my-0  sm:text-left sm:text-lg">
+                        {news.head}
+                      </p>
+                      <p
+                        className="font-roboto text-sm sm:text-md antialiased line-clamp-3 leading-relaxed mt-0 mb-4 overflow-hidden"
+                        // mengambil sebagaian paraghrap pada text body
+                      >
+                        {news.body}
+                      </p>
+                      {/* <span className="text-blue-800">Selengkapnya</span> */}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <Sidebar />
+            </div>
           </div>
         </div>
         <ReactPaginate
@@ -97,14 +84,14 @@ function Pagination() {
           activeLinkClassName="active p-2 rounded text-white bg-slate-400"
         />
       </div>
-      <div className="mt-5 bg-slate-100">
+      <div className="mt-5 bg-slate-100 ">
         <div className="m-2">
           <SidebarHeading judul={"galeri desa tatung"} />
         </div>
-        <div className="flex flex-col sm:flex-row ">
+        <div className="sm:flex flex-wrap  ">
           {galeri.map((galeri, index) => (
-            <div key={index} className="m-2">
-              <div className="sm:w-[20vw] sm:h-[15vw] ">
+            <div key={index} className="m-2 sm:max-w-sm ">
+              <div className="sm:w-full sm:h-[30vh]">
                 <img
                   className="w-full h-full object-cover"
                   src={galeri.img}
@@ -117,8 +104,7 @@ function Pagination() {
             </div>
           ))}
         </div>
-        <div className="">
-        </div>
+        <div className=""></div>
       </div>
     </>
   );

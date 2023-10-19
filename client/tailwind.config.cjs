@@ -15,7 +15,7 @@ module.exports = {
         inter: ["inter", "sans-serif"],
       },
       lineClamp: {
-        7: '7',
+        7: "7",
       },
     },
     screens: {
@@ -30,5 +30,5 @@ module.exports = {
   variants: {
     display: ["responsive", "group-hover", "group-focus"],
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 };

@@ -19,9 +19,9 @@ const Pertanian = () => {
                 <div className=" sm:w-[30vw] h-[40vh] sm:h-[30vh] border rounded m-4 ">
                   <img className="object-cover w-full h-full" src={layanan.img} alt="" />
                 </div>
-                <div className="p-3 m-3 max-w-lg">
+                <div className="p-3 m-3 sm:max-w-sm">
                   <p className="font-bold">{layanan.nama}</p>
-                  <p className="text-base font-light leading-relaxed mt-0 mb-4">{layanan.isi}</p>
+                  <p className="text-base font-light leading-relaxed mt-0 mb-4 line-clamp-4">{layanan.isi}</p>
                 </div>
               </div>
             ))}

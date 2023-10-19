@@ -12,6 +12,11 @@ import gal1 from "./gal1.jpeg";
 import gal2 from "./gal2.jpg";
 import gal3 from "./gal3.jpeg";
 import gal4 from "./gal4.jpg";
+import gal5 from "./kegiatan/IMG-20170515-WA0001.jpg";
+import gal6 from "./kegiatan/IMG-20170515-WA0004.jpg";
+
+import kades from "./Kepaladesa.jpg";
+import sekdes from "./Kepaladesa.jpg";
 
 export const ProfilDesa = [
   {
@@ -187,20 +192,80 @@ export const galeri = [
     judul: "musyawarah desa tatung",
     img: gal4,
   },
+  {
+    id: 5,
+    judul: "pelaksanaan vaksinasi covid-19 desa tatung",
+    img: gal5,
+  },
+  {
+    id: 6,
+    judul: "rapat anggaran tahunan desa tatung",
+    img: gal6,
+  },
 ];
 
-
-const perangkat = [
+export const perangkat = [
   {
     id: 1,
     jabatan: "Kepala Desa",
     nama: "Rudi Bastio S.pd",
-    img: "../../assets/kepaladesa.jpeg",
+    img: kades,
   },
   {
     id: 2,
     jabatan: "Sekretaris Desa",
     nama: "Latif S.se",
     img: "../../assets/sekretaris.jpeg",
-  }
-]
+  },
+  {
+    id: 3,
+    jabatan: "Bendahara Desa",
+    nama: "Musrikah S.Sos",
+    img: "../../assets/sekretaris.jpeg",
+  },
+];
+
+export const berita = [
+  {
+    id: 1,
+    judul: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    tanggal: "2021-09-01",
+    img: "../../assets/ex.jpeg",
+    isi: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum dignissimos fugiat distinctio repellat porro vel!lorem ipsum dolor sit amet consectetur adipisicing elit",
+  },
+  {
+    id: 2,
+    judul: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    tanggal: "2021-09-01",
+    img: "../../assets/ex.jpeg",
+    isi: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum dignissimos fugiat distinctio repellat porro vel!",
+  },
+  {
+    id: 3,
+    judul: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    tanggal: "2021-09-01",
+    img: "../../assets/ex.jpeg",
+    isi: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam et ipsam porro minima facilis, blanditiis atque quo velit obcaecati exercitationem, quibusdam, quidem voluptates. Quisquam, quibusdam.",
+  },
+  {
+    id: 4,
+    judul: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    tanggal: "2021-09-01",
+    img: "../../assets/ex.jpeg",
+    isi: "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+  },
+  {
+    id: 5,
+    judul: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    tanggal: "2021-09-01",
+    img: "../../assets/ex.jpeg",
+    isi: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum dignissimos fugiat distinctio repellat porro vel!lorem ipsum dolor sit amet consectetur adipisicing elit",
+  },
+  {
+    id: 6,
+    judul: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    tanggal: "2021-09-01",
+    img: "../../assets/ex.jpeg",
+    isi: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum dignissimos fugiat distinctio repellat porro vel!",
+  },
+];

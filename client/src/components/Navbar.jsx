@@ -4,12 +4,19 @@ import drop from "../assets/down-arrow.png";
 import Dropdown from "./Dropdown";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaSearch } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaPhone,
+  FaPhoneAlt,
+  FaSearch,
+  FaVoicemail,
+} from "react-icons/fa";
+import Direct from "./Direct";
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
   return (
     <nav className="">
-      <div className="w-full h-auto   bg-slate-900 flex flex-row py-2 px-2 flex-wrap">
+      <div className="w-full h-auto  bg-slate-900 flex flex-row py-3 px-2 flex-wrap">
         <div className="order-1 w-full sm:w-0 ss:hidden  flex flex-row py-2 items-center justify-between ">
           <div
             className="order-1 cursor-pointer"
@@ -60,112 +67,76 @@ const Navbar = () => {
           </div>
         </div>
         <div className="hidden  w-full ss:flex ss:flex-row items-center justify-between">
-          <div className="flex flex-row items-center">
-            <div className="ss:block w-[40px] h-[40px] ss:mr-5">
-              <img
-                className="w-full h-full object-contain"
-                src={logoResident}
-                alt="house"
-              />
-            </div>
-            <div className="ss:block ">
-              <div className="uppercase  text-white ">
-                <h1 className="text-lg">Website resmi desa tatung</h1>
-                <p className="text-sm">Kec.Balong Kab.Ponorogo</p>
-              </div>
+          <div className="text-white">
+            <div className="font-inter text-xs flex space-x-1 items-center">
+              <FaPhoneAlt />
+              <p>022-242999</p>
+              <FaEnvelope />
+              <p>pemdes@tatungbalong.com</p>
             </div>
           </div>
-          <div className="flex items-center">
-            <FaSearch className="" />
-            <input className="w-[20vw]" type="text" placeholder="cari" />
+          <div className="">
+            <p className="font-inter text-xs text-white">Kabupaten Ponorogo</p>
           </div>
         </div>
       </div>
       <div
         className={`w-full pr-10 bg-white ${
           showNav ? "" : "hidden"
-        }  ss:flex flex-row  px-4 lg:px-10  items-center md:text-xs  flex-wrap font-semibold uppercase`}
+        }  ss:flex flex-row   lg:py-4  items-center text-sm justify-between  font-semibold uppercase`}
       >
-        <div className="m-2 p-2">
-          <Link to={"/"}>Beranda</Link>
+        <div className="hidden sm:flex   items-center ">
+            <div className="w-[4vw] lg:w-[3vw] mx-2 h-auto">
+              <img
+                className="w-auto h-auto object-contain "
+                src={logoResident}
+                alt="house"
+              />
+            </div>
+            <div className="uppercase  text-black">
+              <h1 className="text-sm">Website resmi desa tatung</h1>
+              <p className="text-xs">Kabupaten Ponorogo</p>
+            </div>
         </div>
-        <div className="">  
-          <div className="relative group m-4 ">
-            <div className="flex flex-row items-center">
-              <div className="flex flex-row ">
-                <p>Profil</p>
-              </div>
-
-              <div className="w-[35px] h-[35px]">
-                <img
-                  className="w-[100%] h-[100%] object-contain"
-                  src={drop}
-                  alt="drop"
-                />
-              </div>
-            </div>
-
-            <div className="ss:absolute  z-10 hidden bg-grey-200 group-hover:block ">
-              <div className="px-2 pt-2 pb-4 bg-white rounded border  shadow-lg  text-center">
-                <Link>
-                  <p>Sejarah</p>
-                </Link>
-                <Link>
-                  <p>visi misi</p>
-                </Link>
-                <Link to={"/tentang"}>
-                  <p>Tentang</p>
-                </Link>
-              </div>
-            </div>
+        <div className="sm:flex flex-wrap ">
+          <div className="m-2 p-2">
+            <Link to={"/"}>Beranda</Link>
           </div>
-        </div>
-        <div className="">  
-          <div className="relative group m-4 ">
-            <div className="flex flex-row items-center">
-              <div className="flex flex-row ">
-                <p>Pemerintah Desa</p>
-              </div>
-
-              <div className="w-[35px] h-[35px]">
-                <img
-                  className="w-[100%] h-[100%] object-contain"
-                  src={drop}
-                  alt="drop"
-                />
-              </div>
-            </div>
-
-            <div className="ss:absolute  z-10 hidden bg-grey-200 group-hover:block ">
-              <div className="px-2 pt-2 pb-4 bg-white rounded border  shadow-lg  text-center">
-                <Link to={"/lembagadesa"}>
-                  <p>Lembaga Desa</p>
-                </Link>
-                <Link to={"/perangkat"}>
-                  <p>Perangkat</p>
-                </Link>
-              </div>
-            </div>
+          <Dropdown
+            nama="profil desa"
+            list={["/visimisi", "/sejarah", "/tentang"]}
+          />
+          <Dropdown
+            nama="Pemerintah Desa"
+            list={["/lembagadesa", "/perangkat"]}
+          />
+          <Dropdown
+            nama="Informasi Publik"
+            list={[
+              "/pengumuman",
+              "/agenda kegiatan",
+              "/galeri",
+              "/musyawarah",
+              "/berita",
+            ]}
+          />
+          <div className="m-2 p-2 sm:hover:bg-slate-800 sm:hover:text-white  ">
+            <Link>
+              <p>Struktur Desa</p>
+            </Link>
           </div>
-        </div>
-        <Dropdown nama="profil desa" />
-        <div className="m-2 p-2 ">
-          <Link to="/strukturdesa">
-            <p>Struktur Desa</p>
-          </Link>
-        </div>
-        <div className="m-2 p-2">
-          <Link to="/pertanian">
-            <p>Pertanian</p>
-          </Link>
-        </div>
-        <div className="m-2 p-2 ">
-          <Link to="/layananpenduduk">
-            <p>layanan kependudukan</p>
-          </Link>
+          <div className="m-2 p-2 sm:hover:bg-slate-800 sm:hover:text-white">
+            <Link to="/pertanian">
+              <p>Pertanian</p>
+            </Link>
+          </div>
+          <div className="m-2 p-2 sm:hover:bg-slate-800 sm:hover:text-white">
+            <Link to="/layananpenduduk">
+              <p>layanan kependudukan</p>
+            </Link>
+          </div>
         </div>
       </div>
-      <hr />
     </nav>
   );
 };

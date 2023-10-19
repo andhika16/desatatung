@@ -1,26 +1,23 @@
 import React from "react";
 import drop from "../assets/down-arrow.png";
+import Direct from "./Direct";
+import { FaCaretDown } from "react-icons/fa";
 
-const Dropdown = ({nama,list}) => {
+const Dropdown = ({ nama, list }) => {
   return (
-    <div className="relative group m-4 ">
+    <div className="relative group sm:py-4  sm:mx-4   sm:hover:bg-slate-800 sm:hover:text-white  ">
       <div className="flex flex-row items-center">
         <div className="flex flex-row ">
           <p>{nama}</p>
         </div>
-
-        <div className="w-[35px] h-[35px]">
-          <img
-            className="w-[100%] h-[100%] object-contain"
-            src={drop}
-            alt="drop"
-          />
-        </div>
+        <FaCaretDown />
       </div>
 
-      <div className="ss:absolute  z-10 hidden bg-grey-200 group-hover:block ">
-        <div className="px-2 pt-2 pb-4 bg-white  shadow-lg w-[80px] text-center">
-          {list}
+      <div className="ss:absolute w-fit  z-10 hidden bg-grey-300 group-hover:block  ">
+        <div className="sm:w-[10vw] bg-white capitalize   shadow-lg ">
+          {list.map((item, index) => (
+            <Direct key={index} link={item} />
+          ))}
         </div>
       </div>
     </div>

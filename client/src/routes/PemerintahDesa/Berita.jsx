@@ -1,24 +1,24 @@
 import React from "react";
 import Card from "../../components/Card";
-import { layanan } from "../../assets/Link";
+import { berita } from "../../assets/Link";
 import img from "../../assets/ex.jpeg";
 import SidebarHeading from "../../components/SidebarHeading";
 import OptionSection from "../../components/OptionSection";
 
-const LayananPenduduk = () => {
+const Berita = () => {
   return (
     <div className="flex flex-col ">
       <div className="bg-slate-900 text-white">
         <SidebarHeading judul={"layanan penduduk"} />
       </div>
-      <div className="sm:flex flex-row justify-between p-10">
-        <div className="flex flex-col">
-          {layanan.map((layanan, index) => (
+      <div className="sm:flex flex-row justify-between px-10">
+        <div className="flex flex-col ">
+          {berita.map((berita, index) => (
             <Card
               key={index}
-              judul={layanan.judul}
-              tanggal={layanan.tanggal}
-              isi={layanan.isi}
+              judul={berita.judul}
+              tanggal={berita.tanggal}
+              isi={berita.isi}
               img={img}
             />
           ))}
@@ -36,4 +36,4 @@ const LayananPenduduk = () => {
   );
 };
 
-export default LayananPenduduk;
+export default Berita;
