@@ -4,15 +4,15 @@ import SidebarHeading from "../../components/SidebarHeading";
 
 const Perangkat = () => {
   return (
-    <div>
-      <div className="m-2 ">
-        <div className="">
+    <div className="mb-[200px]">
+      <div className="">
+        <div className="bg-slate-900 text-white">
           <SidebarHeading judul={"Perangkat Desa"} />
         </div>
-        <div className="sm:flex ">
+        <div className="sm:flex mt-10 ">
           {perangkat.map((item, index) => (
-            <div key={index} className="mx-5 max-w-md sm:w-[20vw] border rounded-md">
-              <div className="sm:w-[20vw] sm:h-[15vw] ">
+            <div key={index} className="mx-5 max-w-md w-[40vw] sm:w-[20vw] ">
+              <div className=" sm:w-[20vw] sm:h-[15vw] ">
                 <img
                   className="w-full h-full object-cover"
                   src={item.img}

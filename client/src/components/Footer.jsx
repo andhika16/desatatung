@@ -10,7 +10,7 @@ const Footer = () => {
           <p className="font-bold text-sm my-3">
             Desa Tatung - Balong <br></br> Kabupaten Ponorogo - Jawa Timur
           </p>
-          <p className="text-[1vw]">
+          <p className="sm:text-[1vw]">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero totam
             molestiae eum? Reiciendis, voluptate dignissimos aut inventore
             reprehenderit ut facere?

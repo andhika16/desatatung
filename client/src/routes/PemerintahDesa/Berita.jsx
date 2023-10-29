@@ -4,6 +4,7 @@ import { berita } from "../../assets/Link";
 import img from "../../assets/ex.jpeg";
 import SidebarHeading from "../../components/SidebarHeading";
 import OptionSection from "../../components/OptionSection";
+import { Link } from "react-router-dom";
 
 const Berita = () => {
   return (
@@ -14,13 +15,15 @@ const Berita = () => {
       <div className="sm:flex flex-row justify-between px-10">
         <div className="flex flex-col ">
           {berita.map((berita, index) => (
-            <Card
-              key={index}
-              judul={berita.judul}
-              tanggal={berita.tanggal}
-              isi={berita.isi}
-              img={img}
-            />
+            <Link to={`/halamanberita`} key={index}>
+              <Card
+                key={index}
+                judul={berita.judul}
+                tanggal={berita.tanggal}
+                isi={berita.isi}
+                img={img}
+              />
+            </Link> 
           ))}
         </div>
         <div className="sm:w-1/4 sm:mx-2 sm:p-5 ">

@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="w-full h-auto  bg-slate-900 flex flex-row py-3 px-2 flex-wrap">
         <div className="order-1 w-full sm:w-0 ss:hidden  flex flex-row py-2 items-center justify-between ">
           <div
-            className="order-1 cursor-pointer"
+            className="order-1  cursor-pointer"
             onClick={() => setShowNav(!showNav)}
           >
             {showNav ? (
@@ -66,7 +66,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <div className="hidden  w-full ss:flex ss:flex-row items-center justify-between">
+        <div className="hidden sm:p-3  w-full ss:flex ss:flex-row items-center justify-between">
           <div className="text-white">
             <div className="font-inter text-xs flex space-x-1 items-center">
               <FaPhoneAlt />
@@ -83,10 +83,10 @@ const Navbar = () => {
       <div
         className={`w-full pr-10 bg-white ${
           showNav ? "" : "hidden"
-        }  ss:flex flex-row   lg:py-4  items-center text-sm justify-between  font-semibold uppercase`}
+        }  ss:flex flex-row lg:py-4  items-center   justify-between  font-semibold uppercase`}
       >
-        <div className="hidden sm:flex   items-center ">
-            <div className="w-[4vw] lg:w-[3vw] mx-2 h-auto">
+        <div className="hidden sm:flex items-center ">
+            <div className="w-[4vw] lg:w-[4vw] mx-2 h-auto">
               <img
                 className="w-auto h-auto object-contain "
                 src={logoResident}
@@ -98,7 +98,7 @@ const Navbar = () => {
               <p className="text-xs">Kabupaten Ponorogo</p>
             </div>
         </div>
-        <div className="sm:flex flex-wrap ">
+        <div className="sm:flex flex-wrap text-xs">
           <div className="m-2 p-2">
             <Link to={"/"}>Beranda</Link>
           </div>

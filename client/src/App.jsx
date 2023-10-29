@@ -11,6 +11,7 @@ import VisiMisi from "./routes/ProfilDesa/VisiMisi";
 import Tentang from "./routes/ProfilDesa/Tentang";
 import LembagaDesa from "./routes/PemerintahDesa/LembagaDesa";
 import Berita from "./routes/PemerintahDesa/Berita";
+import HalamanBerita from "./routes/PemerintahDesa/HalamanBerita";
 const url = "https://imdb8.p.rapidapi.com/actors/get-all-news?nconst=nm0001667";
 
 const options = {
@@ -48,6 +49,7 @@ function App() {
             <Route path="/berita" element={<Berita />} />
             <Route path="/lembagadesa" element={<LembagaDesa />} />
             <Route path="/perangkat" element={<Perangkat />} />
+            <Route path="/halamanberita" element={<HalamanBerita />} />
             
           </Routes>
           <Footer />
