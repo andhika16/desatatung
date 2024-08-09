@@ -15,7 +15,7 @@ import gal4 from "./gal4.webp";
 import gal5 from "./kegiatan/IMG-20170515-WA0001.webp";
 import gal6 from "./kegiatan/IMG-20170515-WA0004.webp";
 
-import kades from "./Kepaladesa.webp";
+import kades from "./kepaladesa.webp";
 import sekdes from "./latif.webp";
 
 export const ProfilDesa = [
