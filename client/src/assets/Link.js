@@ -16,7 +16,7 @@ import gal5 from "./kegiatan/IMG-20170515-WA0001.webp";
 import gal6 from "./kegiatan/IMG-20170515-WA0004.webp";
 
 import kades from "./Kepaladesa.webp";
-import sekdes from "./Kepaladesa.webp";
+import sekdes from "./latif.webp";
 
 export const ProfilDesa = [
   {
@@ -215,7 +215,7 @@ export const perangkat = [
     id: 2,
     jabatan: "Sekretaris Desa",
     nama: "Latif S.se",
-    img: "../../assets/sekretaris.webp",
+    img: sekdes,
   },
   {
     id: 3,

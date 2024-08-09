@@ -7,7 +7,7 @@ const HalamanBerita = () => {
   return (
     <div className=" min-h-screen   ">
       <div className="bg-slate-900 text-white w-full">
-        <SidebarHeading judul={"Pertanian"} />
+        <SidebarHeading judul={"Hari Ini"} />
       </div>
 
       <div className=" container md:flex md:space-x-8 px-5">

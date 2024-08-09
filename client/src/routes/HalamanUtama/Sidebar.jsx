@@ -5,7 +5,7 @@ import { perangkat } from "../../assets/Link";
 
 const Sidebar = () => {
   return (
-    <div className="sm:w-1/3  p-6 ">
+    <div className="sm:w-1/3  px-6 ">
       <div className="space-y-6">
         {/* Sistem Informasi Section */}
         <div>

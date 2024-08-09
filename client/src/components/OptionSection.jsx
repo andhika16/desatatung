@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const OptionSection = () => {
   return (
-    <div className="bg-slate-100 py-10">
+    <div className="bg-slate-100 py-5">
       <div className="container mx-auto flex flex-wrap justify-center gap-6">
         {[
           {
@@ -34,14 +34,14 @@ const OptionSection = () => {
           <Link
             to={item.link}
             key={index}
-            className="w-[40vw] sm:w-[25vw] md:w-[20vw] lg:w-[15vw] bg-white shadow-lg p-5 flex flex-col items-center hover:shadow-xl transition-shadow duration-300 ease-in-out"
+            className="w-[40vw] sm:w-[25vw] md:w-[20vw] lg:w-[15vw]  p-5 flex flex-col items-center border-2 border-slate-900"
           >
             <img
               src={item.image}
               className="w-16 h-16 sm:w-20 sm:h-20"
               alt={item.title}
             />
-            <p className="text-center text-slate-700 font-semibold text-sm sm:text-base mt-4">
+            <p className="text-center text-slate-500   font-inter text-sm sm:text-base mt-4">
               {item.title}
             </p>
           </Link>
