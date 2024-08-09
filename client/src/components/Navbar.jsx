@@ -1,31 +1,25 @@
 import React from "react";
 import logoResident from "../assets/house.png";
-import drop from "../assets/down-arrow.png";
 import Dropdown from "./Dropdown";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  FaEnvelope,
-  FaPhone,
-  FaPhoneAlt,
-  FaSearch,
-  FaVoicemail,
-} from "react-icons/fa";
-import Direct from "./Direct";
+import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
+
   return (
-    <nav className="">
-      <div className="w-full h-auto  bg-slate-900 flex flex-row py-3 px-2 flex-wrap">
-        <div className="order-1 w-full sm:w-0 ss:hidden  flex flex-row py-2 items-center justify-between ">
-          <div
-            className="order-1  cursor-pointer"
+    <nav className="bg-gray-800 text-white">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-4 px-6">
+        <div className="flex items-center w-full md:w-auto">
+          <button
+            className="text-white md:hidden flex items-center"
             onClick={() => setShowNav(!showNav)}
           >
             {showNav ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6 text-white"
+                className="w-6 h-6"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
@@ -38,7 +32,7 @@ const Navbar = () => {
             ) : (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6 text-white"
+                className="w-6 h-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -51,88 +45,72 @@ const Navbar = () => {
                 />
               </svg>
             )}
-          </div>
-          <div className="flex items-center w-full">
-            <div className="w-[8vw] h-auto">
-              <img
-                className="w-auto h-auto object-contain "
-                src={logoResident}
-                alt="house"
-              />
-            </div>
-            <div className="uppercase  text-white">
-              <h1 className="text-lg">Website resmi desa tatung</h1>
-              <p className="text-sm">Kec.Balong Kab.Ponorogo</p>
+          </button>
+          <div className="flex items-center">
+            <img className="w-24 h-auto mr-4" src={logoResident} alt="house" />
+            <div className="text-white">
+              <h1 className="text-lg font-semibold">
+                Website Resmi Desa Tatung
+              </h1>
+              <p className="text-sm">Kecamatan Balong, Kabupaten Ponorogo</p>
             </div>
           </div>
         </div>
-        <div className="hidden sm:p-3  w-full ss:flex ss:flex-row items-center justify-between">
-          <div className="text-white">
-            <div className="font-inter text-xs flex space-x-1 items-center">
-              <FaPhoneAlt />
-              <p>022-242999</p>
-              <FaEnvelope />
-              <p>pemdes@tatungbalong.com</p>
-            </div>
-          </div>
-          <div className="">
-            <p className="font-inter text-xs text-white">Kabupaten Ponorogo</p>
+        <div
+          className={`md:flex items-center space-x-4 ${
+            showNav ? "" : "hidden"
+          }`}
+        >
+          <div className="text-sm flex items-center space-x-2">
+            <FaPhoneAlt />
+            <p>022-242999</p>
+            <FaEnvelope />
+            <p>pemdes@tatungbalong.com</p>
           </div>
         </div>
       </div>
       <div
-        className={`w-full pr-10 bg-white ${
+        className={`bg-gray-700 ${
           showNav ? "" : "hidden"
-        }  ss:flex flex-row lg:py-4  items-center   justify-between  font-semibold uppercase`}
+        } md:flex md:justify-center`}
       >
-        <div className="hidden sm:flex items-center ">
-            <div className="w-[4vw] lg:w-[4vw] mx-2 h-auto">
-              <img
-                className="w-auto h-auto object-contain "
-                src={logoResident}
-                alt="house"
-              />
-            </div>
-            <div className="uppercase  text-black">
-              <h1 className="text-sm">Website resmi desa tatung</h1>
-              <p className="text-xs">Kabupaten Ponorogo</p>
-            </div>
-        </div>
-        <div className="sm:flex flex-wrap text-xs">
-          <div className="m-2 p-2">
-            <Link to={"/"}>Beranda</Link>
+        <div className="container mx-auto flex flex-wrap items-center text-sm font-medium uppercase">
+          <div className="m-2">
+            <Link to="/" className="hover:text-yellow-300">
+              Beranda
+            </Link>
           </div>
           <Dropdown
-            nama="profil desa"
-            list={["/visimisi", "/sejarah", "/tentang"]}
+            nama="Profil Desa"
+            list={["visimisi", "sejarah", "tentang"]}
           />
           <Dropdown
             nama="Pemerintah Desa"
-            list={["/lembagadesa", "/perangkat"]}
+            list={["lembagadesa", "perangkat"]}
           />
           <Dropdown
             nama="Informasi Publik"
             list={[
-              "/pengumuman",
-              "/agenda kegiatan",
-              "/galeri",
-              "/musyawarah",
-              "/berita",
+              "pengumuman",
+              "agenda-kegiatan",
+              "galeri",
+              "musyawarah",
+              "berita",
             ]}
           />
-          <div className="m-2 p-2 sm:hover:bg-slate-800 sm:hover:text-white  ">
-            <Link>
-              <p>Struktur Desa</p>
+          <div className="m-2">
+            <Link to="/struktur-desa" className="hover:text-yellow-300">
+              Struktur Desa
             </Link>
           </div>
-          <div className="m-2 p-2 sm:hover:bg-slate-800 sm:hover:text-white">
-            <Link to="/pertanian">
-              <p>Pertanian</p>
+          <div className="m-2">
+            <Link to="/pertanian" className="hover:text-yellow-300">
+              Pertanian
             </Link>
           </div>
-          <div className="m-2 p-2 sm:hover:bg-slate-800 sm:hover:text-white">
-            <Link to="/layananpenduduk">
-              <p>layanan kependudukan</p>
+          <div className="m-2">
+            <Link to="/layananpenduduk" className="hover:text-yellow-300">
+              Layanan Kependudukan
             </Link>
           </div>
         </div>

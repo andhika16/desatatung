@@ -3,70 +3,85 @@ import SidebarHeading from "../../components/SidebarHeading";
 
 const Tentang = () => {
   return (
-    <div className="">
-      <div className="bg-slate-900 text-white">
-        <SidebarHeading judul={"tentang"} />
-      </div>
-      <div className="my-5 m-2 px-10">
-        <div className="">
-          <div className="font-semibold text-2xl capitalize ">
-            <p>tentang platform tata kelola desa </p>
-          </div>
-          <div className="my-5">
-            <p>Tujuan Pengembangan PTKD adalah :</p>
-            <ol>
+    <div className="min-h-screen bg-gray-100">
+      <SidebarHeading judul={"Tentang"} />
+
+      <div className="container mx-auto px-4 py-6">
+        <div className="bg-white rounded-lg shadow-lg p-6">
+          <h2 className="font-semibold text-2xl capitalize mb-4">
+            Tentang Platform Tata Kelola Desa
+          </h2>
+
+          <div className="my-6">
+            <h3 className="font-bold text-xl mb-2">
+              Tujuan Pengembangan PTKD:
+            </h3>
+            <ul className="list-disc list-inside pl-6 space-y-2">
               <li>
-                1. Meningkatkan kualitas perencanaan dan perumusan kebijakan
+                Meningkatkan kualitas perencanaan dan perumusan kebijakan
                 pembangunan desa dan kawasan perdesaan.
               </li>
-              <li>
-                2. Meningkatkan kualitas penyelenggaraan pemerintahan desa.
-              </li>
-              <li>3. Meningkatkan kualitas pelayanan publik.</li>
-              <li>4. Meningkatkan kualitas pengelolaan keuangan desa.</li>
-            </ol>
+              <li>Meningkatkan kualitas penyelenggaraan pemerintahan desa.</li>
+              <li>Meningkatkan kualitas pelayanan publik.</li>
+              <li>Meningkatkan kualitas pengelolaan keuangan desa.</li>
+            </ul>
           </div>
-          <div className="my-5">
-            <p>Ruang Lingkup Pengembangan PTKD meliputi:</p>
-            <ol>
-              <li>a. Kedudukan, fungsi dan manfaat PTKD</li>
-              <li>b. Perangkat PTKD</li>
-              <li>c. Muatan PTKD</li>
-              <li>d. Pengembangan PTKD</li>
-              <li>e. Pengelolaan PTKD</li>
-              <li>f.Tata cara dan penerapan PTKD</li>
-              <li>g.Pembiayaan</li>
-            </ol>
+
+          <div className="my-6">
+            <h3 className="font-bold text-xl mb-2">
+              Ruang Lingkup Pengembangan PTKD Meliputi:
+            </h3>
+            <ul className="list-disc list-inside pl-6 space-y-2">
+              <li>Kedudukan, fungsi, dan manfaat PTKD</li>
+              <li>Perangkat PTKD</li>
+              <li>Muatan PTKD</li>
+              <li>Pengembangan PTKD</li>
+              <li>Pengelolaan PTKD</li>
+              <li>Tata cara dan penerapan PTKD</li>
+              <li>Pembiayaan</li>
+            </ul>
           </div>
         </div>
-        <div className="border-l-4 border-slate-800 pl-2">
-          <p className="font-bold text-slate-900 ">Kantor</p>
-          <p>Desa Tatung - Balong - Ponorogo</p>
-          <table>
+
+        <div className="bg-white rounded-lg shadow-lg p-6 mt-6 border-l-4 border-slate-800">
+          <h3 className="font-bold text-xl text-slate-900 mb-4">Kantor</h3>
+          <p className="text-lg mb-4">Desa Tatung - Balong - Ponorogo</p>
+          <table className="w-full text-left">
             <tbody>
               <tr>
-                <td>Alamat</td>
-                <td>Jl.Raya Ponorogo Balong, Tatung,Balong,Ponorogo</td>
+                <td className="font-semibold py-2">Alamat</td>
+                <td className="py-2">
+                  Jl. Raya Ponorogo Balong, Tatung, Balong, Ponorogo
+                </td>
               </tr>
               <tr>
-                <td>Kode Pos</td>
-                <td>83461</td>
+                <td className="font-semibold py-2">Kode Pos</td>
+                <td className="py-2">83461</td>
               </tr>
               <tr>
-                <td>No.Telp</td>
-                <td>08329993023</td>
+                <td className="font-semibold py-2">No. Telp</td>
+                <td className="py-2">08329993023</td>
               </tr>
               <tr>
-                <td>Fax</td>
-                <td>N/A</td>
+                <td className="font-semibold py-2">Fax</td>
+                <td className="py-2">N/A</td>
               </tr>
               <tr>
-                <td>Email</td>
-                <td>pemdes@tatung-balong.desa.id</td>
+                <td className="font-semibold py-2">Email</td>
+                <td className="py-2">pemdes@tatung-balong.desa.id</td>
               </tr>
               <tr>
-                <td>Website</td>
-                <td>https://tatung-balong.desa.id</td>
+                <td className="font-semibold py-2">Website</td>
+                <td className="py-2">
+                  <a
+                    href="https://tatung-balong.desa.id"
+                    className="text-blue-600 hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    https://tatung-balong.desa.id
+                  </a>
+                </td>
               </tr>
             </tbody>
           </table>

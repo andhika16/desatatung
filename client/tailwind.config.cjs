@@ -11,8 +11,11 @@ module.exports = {
         dimBlue: "rgba(9, 151, 124, 0.1)",
       },
       fontFamily: {
-        poppins: ["Poppins"],
-        inter: ["inter", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+        roboto: ["Roboto Slab", "serif"],
+        openSans: ["Open Sans", "sans-serif"],
+        outfit: ["Outfit", "sans-serif"],
       },
       lineClamp: {
         7: "7",

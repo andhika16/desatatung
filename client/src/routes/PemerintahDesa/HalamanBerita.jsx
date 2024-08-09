@@ -1,48 +1,32 @@
 import React from "react";
 import SidebarHeading from "../../components/SidebarHeading";
-import dadu from "../../assets/ex.jpeg";
-import {
-  FaArrowAltCircleLeft,
-  FaArrowAltCircleRight,
-  FaRegBookmark,
-  FaInfo,
-  FaPaperclip,
-} from "react-icons/fa";
-
+import dadu from "../../assets/ex.webp";
+import { FaRegBookmark } from "react-icons/fa";
+import { berita } from "../../assets/Link";
 const HalamanBerita = () => {
-  const data = [
-    {
-      id: 1,
-      nama: "lorem ipsum dolor sit amet cons Quisquam, voluptatum.",
-    },
-    {
-      id: 2,
-      nama: "lorem ipsum elit. Quisquam, voluptatum.",
-    },
-    {
-      id: 3,
-      nama: "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-    },
-  ];
-
   return (
-    <div className="mb-10">
-      <div className="bg-slate-900 text-white ">
-        <SidebarHeading judul={"halaman berita"} />
+    <div className=" min-h-screen   ">
+      <div className="bg-slate-900 text-white w-full">
+        <SidebarHeading judul={"Pertanian"} />
       </div>
-      <div className="mx-11 mt-10 md:flex">
-        <div className="max-w-4xl flex flex-col items-center">
-          <div className="text-2xl font-semibold">
-            <p>
-              Pengadaan anggaran yang dilaksanakan oleh pemerintah kabupaten
-              ponorogo di desa tatung
-            </p>
-            <span></span>
+
+      <div className=" container md:flex md:space-x-8 px-5">
+        {/* Konten Utama */}
+        <div className="md:flex-1 mb-8">
+          <h1 className="text-3xl lg:text-4xl font-bold leading-tight mb-4">
+            Pengadaan Anggaran Pemerintah Kabupaten Ponorogo di Desa Tatung
+          </h1>
+          <p className="text-sm text-gray-500 mb-4">
+            Oleh Admin | 9 Agustus 2024
+          </p>
+          <div className="mb-6">
+            <img
+              className="w-full h-auto object-cover rounded-lg shadow-lg"
+              src={dadu}
+              alt="Gambar Berita"
+            />
           </div>
-          <div className="my-5">
-            <img className="w-[90vw] h-full" src={dadu} alt="" />
-          </div>
-          <div className="font-thin text-justify">
+          <div className="prose max-w-none text-justify font-openSans ">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. In a
               aliquid cum? Facere illo deleniti ab minus! Aspernatur voluptatem,
@@ -52,60 +36,44 @@ const HalamanBerita = () => {
               reiciendis quae placeat distinctio, sunt, exercitationem deserunt?
             </p>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
-              quibusdam atque at! Nostrum odit dolorem mollitia ex iusto eaque
-              ad sit esse possimus corrupti excepturi laborum recusandae, labore
-              blanditiis maiores tenetur obcaecati.
-            </p>
-            <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat
               iusto numquam magni!
             </p>
           </div>
         </div>
-        <div className=" md:ml-10 ">
-          <div className="">
-            <div className="w-full border-slate-800 border-b-2 p-2 mb-5">
-              <p className="text-1xl  text-black font-semibold ">
-                Berita Lainya
-              </p>
-            </div>
-            <div className="space-y-4 ">
-              {data.map((item) => {
-                return (
-                  <div className="flex " key={item.id}>
-                    <span className="font-bold text-slate-300 p-4  mr-3">
-                      {item.id}
-                    </span>
-                    <p className="font-roboto font-semibold">{item.nama}</p>
-                  </div>
-                );
-              })}
+
+        {/* Sidebar */}
+        <aside className="md:w-80">
+          <div className="mb-10">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4 ">
+              Berita Lainnya
+            </h2>
+            <div className="space-y-4">
+              {berita.map((item, index) => (
+                <div className="flex items-start space-x-3" key={item.id}>
+                  <span className="text-gray-500 font-bold font-openSans">#</span>
+                  <p className="text-lg font-medium text-gray-700 hover:text-blue-700 transition-colors">
+                    {item.judul}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
-          <div className="mt-10">
-            <div className="bg-slate-200 rounded">
-              <div className="w-full  rounded p-2 ">
-                <p className="text-1xl font-semibold ">Informasi</p>
-              </div>
-              <div className="space-y-4 p-3">
-                {data.map((item) => {
-                  return (
-                    <div
-                      className="flex "
-                      key={item.id}
-                    >
-                      <p className="font-roboto font-semibold">
-                        <FaRegBookmark />
-                        {item.nama}
-                      </p>
-                    </div>
-                  );
-                })}
-              </div>
+
+          <div className="p-4 bg-slate-100 rounded-lg shadow-lg">
+            <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              Informasi
+            </h2>
+            <div className="space-y-4">
+              {berita.map((item,index) => (
+                <div className="flex items-center space-x-2" key={item.id}>
+                  <span className="text-2xl font-openSans text-yellow-400 font-bold mr-2">{index + 1}.</span>
+                  <p className="text-lg text-gray-700 font-openSans">{item.judul}</p>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
+        </aside>
       </div>
     </div>
   );

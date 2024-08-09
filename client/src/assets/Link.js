@@ -1,22 +1,22 @@
-import cr1 from "./pict1.jpg";
-import cr2 from "./pict2.jpg";
-import cr3 from "./pict3.jpg";
-import cr4 from "./pict4.jpg";
+import cr1 from "./pict1.webp";
+import cr2 from "./pict2.webp";
+import cr3 from "./pict3.webp";
+import cr4 from "./pict4.webp";
 
-import kacang from "../assets/kacanghijau.jpg";
-import jagung from "../assets/jagung.jpg";
-import padi from "../assets/padi.jpg";
-import tembakau from "../assets/tembakau.jpg";
+import kacang from "../assets/kacanghijau.webp";
+import jagung from "../assets/jagung.webp";
+import padi from "../assets/padi.webp";
+import tembakau from "../assets/tembakau.webp";
 
-import gal1 from "./gal1.jpeg";
-import gal2 from "./gal2.jpg";
-import gal3 from "./gal3.jpeg";
-import gal4 from "./gal4.jpg";
-import gal5 from "./kegiatan/IMG-20170515-WA0001.jpg";
-import gal6 from "./kegiatan/IMG-20170515-WA0004.jpg";
+import gal1 from "./gal1.webp";
+import gal2 from "./gal2.webp";
+import gal3 from "./gal3.webp";
+import gal4 from "./gal4.webp";
+import gal5 from "./kegiatan/IMG-20170515-WA0001.webp";
+import gal6 from "./kegiatan/IMG-20170515-WA0004.webp";
 
-import kades from "./Kepaladesa.jpg";
-import sekdes from "./Kepaladesa.jpg";
+import kades from "./Kepaladesa.webp";
+import sekdes from "./Kepaladesa.webp";
 
 export const ProfilDesa = [
   {
@@ -83,59 +83,59 @@ export const layanan = [
     id: 1,
     judul: "Pengaduan",
     tanggal: "2021-09-01",
-    img: "../../assets/ex.jpeg",
-    isi: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque rerum in itaque aut laborum nobis iure sed, quibusdam animi quidem praesentium? Impedit quas disignissimos praesentium officia nisi animi labore quidem culpa rerum corrupti veniam odit ut ea excepturi doloribus perspiciatis.",
+    img: "../../assets/ex.webp",
+    isi: "Jika Anda mengalami masalah atau ketidakpuasan dengan layanan kami, Anda dapat mengajukan pengaduan melalui formulir online yang tersedia di website kami. Kami berkomitmen untuk menanggapi setiap pengaduan dengan cepat dan efisien untuk memastikan kepuasan Anda.",
   },
   {
     id: 2,
     judul: "Permohonan Surat",
     tanggal: "2021-09-01",
-    img: "../../assets/ex.jpeg",
-    isi: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque rerum in itaque aut laborum nobis iure sed, quibusdam animi quidem praesentium? Impedit quas distinctioarum odio ratione quae, ipsum dignissimos praesentium officia nisi animi labore quidem culpa rerum corrupti veniam odit ut ea excepturi doloribus perspiciatis.",
+    img: "../../assets/ex.webp",
+    isi: "Untuk permohonan surat resmi, seperti surat keterangan atau surat izin, silakan mengisi formulir permohonan yang tersedia di portal layanan kami. Pastikan Anda melengkapi semua data yang diperlukan agar proses permohonan dapat berjalan lancar.",
   },
   {
     id: 3,
     judul: "Permohonan Keterangan",
     tanggal: "2021-09-01",
-    img: "../../assets/ex.jpeg",
-    isi: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque rerum in itaque aut laborum nobis iure sed, quibusdam animi quidem praesentium? Impedius perspiciatis.",
+    img: "../../assets/ex.webp",
+    isi: "Jika Anda membutuhkan surat keterangan untuk keperluan administrasi atau lainnya, silakan ajukan permohonan melalui aplikasi kami dengan melengkapi informasi yang diminta. Proses ini biasanya memerlukan waktu beberapa hari kerja.",
   },
   {
     id: 4,
     judul: "Permohonan Izin",
     tanggal: "2021-09-01",
-    img: "../../assets/ex.jpeg",
-    isi: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque rerum in itaque aut laborum nobis iure sed, quibusdam animi quidem praesentium? Impedit quas distinctioiciatis. lorem",
+    img: "../../assets/ex.webp",
+    isi: "Permohonan izin untuk berbagai kegiatan dapat diajukan melalui sistem kami. Pastikan Anda menyertakan dokumen yang diperlukan dan informasi yang lengkap untuk mempercepat proses persetujuan.",
   },
   {
     id: 5,
     judul: "Permohonan Bantuan",
     tanggal: "2021-09-01",
-    img: "../../assets/ex.jpeg",
-    isi: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque rerum in itaque aut laborum nobis iure sed, quibusdam animi quidem eligendi enim deleniti? Earum odio ratione quae, ipsum dignissimos praesentium officia nisi animi labore quidem culpa rerum corrupti veniam odit ut ea excepturi doloribus perspiciatis.",
+    img: "../../assets/ex.webp",
+    isi: "Jika Anda memerlukan bantuan atau dukungan dari pihak desa, ajukan permohonan melalui portal bantuan kami. Kami menyediakan berbagai bentuk bantuan yang dapat disesuaikan dengan kebutuhan Anda, dan tim kami akan siap membantu Anda.",
   },
 ];
 
 export const carousel = [
   {
     id: 1,
-    title: "First slide label",
+    title: "Paralayang",
     img: cr1,
   },
 
   {
     id: 2,
-    title: "second slide label",
+    title: "Pertanian",
     img: cr2,
   },
   {
     id: 3,
-    title: "third slide label",
+    title: "Dusun Pelem Sengir",
     img: cr3,
   },
   {
     id: 4,
-    title: "Fourth slide label",
+    title: "Desa Adat",
     img: cr4,
   },
 ];
@@ -215,57 +215,45 @@ export const perangkat = [
     id: 2,
     jabatan: "Sekretaris Desa",
     nama: "Latif S.se",
-    img: "../../assets/sekretaris.jpeg",
+    img: "../../assets/sekretaris.webp",
   },
   {
     id: 3,
     jabatan: "Bendahara Desa",
     nama: "Musrikah S.Sos",
-    img: "../../assets/sekretaris.jpeg",
+    img: "../../assets/sekretaris.webp",
   },
 ];
 
 export const berita = [
   {
-    id: 1,
-    judul: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    tanggal: "2021-09-01",
-    img: "../../assets/ex.jpeg",
-    isi: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum dignissimos fugiat distinctio repellat porro vel!lorem ipsum dolor sit amet consectetur adipisicing elit",
+    judul: "Peluncuran Program Kartu Prakerja Baru",
+    tanggal: "9 Agustus 2024",
+    isi: "Pemerintah meluncurkan program Kartu Prakerja baru yang bertujuan untuk meningkatkan keterampilan kerja dan memfasilitasi pelatihan bagi masyarakat. Program ini menawarkan berbagai kursus dan pelatihan dengan dukungan finansial yang signifikan.",
+    img: "https://images.unsplash.com/photo-1532615324717-c8287e81a2bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGxhcmdlIHNlcmllc3xlbnwwfHx8fDE2NTczMzgyMzg&ixlib=rb-1.2.1&q=80&w=1080",
   },
   {
-    id: 2,
-    judul: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    tanggal: "2021-09-01",
-    img: "../../assets/ex.jpeg",
-    isi: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum dignissimos fugiat distinctio repellat porro vel!",
+    judul: "Pendaftaran Informasi Kartu Keluarga Kini Online",
+    tanggal: "7 Agustus 2024",
+    isi: "Kini pendaftaran dan pembaruan informasi Kartu Keluarga dapat dilakukan secara online melalui portal resmi pemerintah. Langkah ini diambil untuk mempermudah proses administrasi dan mengurangi waktu yang dibutuhkan untuk pengurusan dokumen.",
+    img: "https://images.unsplash.com/photo-1553746606-45d39d6c47c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGxhcmdlIHNlcmllc3xlbnwwfHx8fDE2NTczMzgyNjg&ixlib=rb-1.2.1&q=80&w=1080",
   },
   {
-    id: 3,
-    judul: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    tanggal: "2021-09-01",
-    img: "../../assets/ex.jpeg",
-    isi: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam et ipsam porro minima facilis, blanditiis atque quo velit obcaecati exercitationem, quibusdam, quidem voluptates. Quisquam, quibusdam.",
+    judul: "Bantuan Sosial untuk Keluarga Kurang Mampu",
+    tanggal: "5 Agustus 2024",
+    isi: "Pemerintah telah menyalurkan bantuan sosial terbaru kepada keluarga kurang mampu di seluruh wilayah. Bantuan ini mencakup paket sembako dan bantuan finansial untuk membantu memenuhi kebutuhan dasar selama masa sulit.",
+    img: "https://images.unsplash.com/photo-1581281134385-00993f18c832?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGxhcmdlIHNlcmllc3xlbnwwfHx8fDE2NTczMzgyOTU&ixlib=rb-1.2.1&q=80&w=1080",
   },
   {
-    id: 4,
-    judul: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    tanggal: "2021-09-01",
-    img: "../../assets/ex.jpeg",
-    isi: "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    judul: "Reformasi Sistem Pendidikan di Desa Tatung",
+    tanggal: "3 Agustus 2024",
+    isi: "Desa Tatung akan memulai reformasi sistem pendidikan untuk meningkatkan kualitas pendidikan di daerah tersebut. Program ini meliputi peningkatan fasilitas sekolah, pelatihan guru, dan program beasiswa untuk siswa berprestasi.",
+    img: "https://images.unsplash.com/photo-1555685818-058a4d07c4d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGxhcmdlIHNlcmllc3xlbnwwfHx8fDE2NTczMzgyNDg&ixlib=rb-1.2.1&q=80&w=1080",
   },
   {
-    id: 5,
-    judul: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    tanggal: "2021-09-01",
-    img: "../../assets/ex.jpeg",
-    isi: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum dignissimos fugiat distinctio repellat porro vel!lorem ipsum dolor sit amet consectetur adipisicing elit",
-  },
-  {
-    id: 6,
-    judul: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    tanggal: "2021-09-01",
-    img: "../../assets/ex.jpeg",
-    isi: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum dignissimos fugiat distinctio repellat porro vel!",
+    judul: "Pengembangan Infrastruktur Desa untuk Tahun 2025",
+    tanggal: "1 Agustus 2024",
+    isi: "Desa Tatung akan mendapatkan alokasi anggaran tambahan untuk pengembangan infrastruktur pada tahun 2025. Proyek ini mencakup pembangunan jalan, jembatan, dan fasilitas umum lainnya untuk mendukung pertumbuhan dan kesejahteraan masyarakat.",
+    img: "https://via.placeholder.com/400x200?text=Pengembangan+Infrastruktur",
   },
 ];
