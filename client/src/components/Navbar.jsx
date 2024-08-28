@@ -9,11 +9,11 @@ const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
 
   return (
-    <nav className="bg-gray-800 text-white">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-4 px-6">
-        <div className="flex items-center w-full md:w-auto">
+    <nav className="bg-slate-800 text-white">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-4 ">
+        <div className="flex items-center justify-center w-full md:w-auto">
           <button
-            className="text-white md:hidden flex items-center"
+            className="text-white md:hidden flex"
             onClick={() => setShowNav(!showNav)}
           >
             {showNav ? (
@@ -46,22 +46,22 @@ const Navbar = () => {
               </svg>
             )}
           </button>
-          <div className="flex items-center">
-            <img className="w-24 h-auto mr-4" src={logoResident} alt="house" />
+          <Link to="/" className="flex justify-center space-x-2 flex-1  sm:items-center">
+            <img className="w-10 h-auto " src={logoResident} alt="house" />
             <div className="text-white">
-              <h1 className="text-lg font-semibold">
+              <h1 className="text-lg font-bold sm:text-3xl font-openSans ">
                 Website Resmi Desa Tatung
               </h1>
-              <p className="text-sm">Kecamatan Balong, Kabupaten Ponorogo</p>
+              <p className="text-sm font-outfit">Kecamatan Balong, Kabupaten Ponorogo</p>
             </div>
-          </div>
+          </Link>
         </div>
         <div
           className={`md:flex items-center space-x-4 ${
             showNav ? "" : "hidden"
           }`}
         >
-          <div className="text-sm flex items-center space-x-2">
+          <div className="text-sm font-outfit flex items-center space-x-2">
             <FaPhoneAlt />
             <p>022-242999</p>
             <FaEnvelope />
@@ -70,13 +70,13 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className={`bg-gray-700 ${
+        className={`bg-slate-800 sm:py-2 ${
           showNav ? "" : "hidden"
         } md:flex md:justify-center`}
       >
-        <div className="container mx-auto flex flex-wrap items-center text-sm font-medium uppercase">
+        <div className="container mx-auto flex flex-wrap items-center text-sm font-openSans font-medium uppercase ">
           <div className="m-2">
-            <Link to="/" className="hover:text-yellow-300">
+            <Link to="/" className="">
               Beranda
             </Link>
           </div>
@@ -85,7 +85,7 @@ const Navbar = () => {
             list={["visimisi", "sejarah", "tentang"]}
           />
           <Dropdown
-            nama="Pemerintah Desa"
+            nama="Pemerintahan"
             list={["lembagadesa", "perangkat"]}
           />
           <Dropdown
@@ -99,17 +99,17 @@ const Navbar = () => {
             ]}
           />
           <div className="m-2">
-            <Link to="/struktur-desa" className="hover:text-yellow-300">
+            <Link to="/struktur-desa" className="">
               Struktur Desa
             </Link>
           </div>
           <div className="m-2">
-            <Link to="/pertanian" className="hover:text-yellow-300">
+            <Link to="/pertanian" className="">
               Pertanian
             </Link>
           </div>
           <div className="m-2">
-            <Link to="/layananpenduduk" className="hover:text-yellow-300">
+            <Link to="/layananpenduduk" className="">
               Layanan Kependudukan
             </Link>
           </div>

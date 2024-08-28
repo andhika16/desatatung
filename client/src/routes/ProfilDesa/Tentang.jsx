@@ -3,11 +3,11 @@ import SidebarHeading from "../../components/SidebarHeading";
 
 const Tentang = () => {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="">
       <SidebarHeading judul={"Tentang"} />
 
-      <div className="container mx-auto px-4 py-6">
-        <div className="bg-white rounded-lg shadow-lg p-6">
+      <div className="container font-outfit  px-4 py-6">
+        <div className="p-6">
           <h2 className="font-semibold text-2xl capitalize mb-4">
             Tentang Platform Tata Kelola Desa
           </h2>

@@ -3,12 +3,12 @@ import SidebarHeading from "../../components/SidebarHeading";
 const LembagaDesa = () => {
   return (
     <div className="flex flex-col">
-      <div className="bg-slate-900 text-white">
+      <div className="">
         <SidebarHeading judul={"Lembaga Desa"} />
       </div>
       <div className="p-10">
         <div className="">
-          <table className="w-full text-left uppercase font-thin">
+          <table className="w-full font-openSans text-left capitalize">
             <tbody>
               <tr>
                 <th>Nama Lembaga</th>

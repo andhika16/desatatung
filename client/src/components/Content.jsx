@@ -25,15 +25,11 @@ function Pagination() {
   };
 
   return (
-    <div className="py-10 ">
+    <div className="sm:py-5">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-8">
-          <h1 className="text-2xl sm:text-3xl font-bold underline underline-offset-4">
-            Berita Desa Terkini
-          </h1>
-        </div>
-        <div className="flex flex-col lg:flex-row gap-6">
-          <div className="flex-1 space-y-6 lg:pr-6">
+        <div className="grid grid-cols-1 sm:flex lg:flex-row ">
+          <div className="flex-1 space-y-2 lg:pr-6">
+          <h1 className="text-3xl text-center pb-10 capitalize font-bold text-slate-800">Informasi berita</h1>
             {isLoading ? (
               <div className="flex justify-center items-center h-48">
                 <div className="flex space-x-2">
@@ -46,26 +42,26 @@ function Pagination() {
               <>
                 {currentItems.map((news, index) => (
                   <div
-                    className="flex flex-col lg:flex-row bg-white shadow-lg overflow-hidden"
+                    className="flex flex-col lg:flex-row items-center overflow-hidden"
                     key={index}
                   >
-                    <div className="w-full lg:w-1/2 h-48 lg:h-60 bg-cover bg-center">
+                    <div className="w-full lg:w-60 h-48 lg:h-48   bg-cover bg-center">
                       <img
                         className="w-full h-full object-cover"
-                        src={news.image.url}
-                        alt={news.image.id}
+                        src={news.image?.url}
+                        alt={news.image?.id}
                       />
                     </div>
-                    <div className="p-4 flex flex-col justify-between flex-1">
-                      <p className="font-semibold text-gray-900 text-lg lg:text-xl">
+                    <div className="sm:pl-4 flex flex-col justify-between flex-1">
+                      <p className="font-openSans  text-gray-900 text-lg lg:text-xl">
                         {news.head}
                       </p>
-                      <p className="font-roboto text-sm lg:text-md antialiased line-clamp-3 leading-relaxed mb-4 text-gray-700">
+                      <p className="font-openSans text-sm lg:text-md antialiased line-clamp-3 leading-relaxed mb-4 text-gray-700">
                         {news.body}
                       </p>
                       <a
                         href="#"
-                        className="text-blue-800 font-semibold text-sm lg:text-md"
+                        className="text-gray-500 font-semibold text-sm lg:text-md"
                       >
                         Selengkapnya
                       </a>
@@ -92,25 +88,30 @@ function Pagination() {
           <Sidebar />
         </div>
 
-        <div className="mt-10 bg-slate-100">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mt-6 ">
+          <div className="container mx-auto ">
             <SidebarHeading judul={"Galeri Desa Tatung"} />
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6">
-              {galeri.map((galeri, index) => (
-                <div
-                  key={index}
-                  className="relative w-full h-48 sm:h-60 md:h-72 bg-cover bg-center"
-                >
-                  <img
-                    className="w-full h-full object-cover"
-                    src={galeri.img}
-                    alt={galeri.judul}
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3 text-center">
-                    <p className="text-sm sm:text-base">{galeri.judul}</p>
+            <div className="flex space-x-2">
+              <div className="grid grid-cols-2 sm:grid-cols-2 gap-1 md:grid-cols-3 mt-2 w-2/3">
+                {galeri.map((galeri, index) => (
+                  <div key={index} className="relative  bg-cover bg-center">
+                    <img
+                      className="w-full h-full object-cover"
+                      src={galeri.img}
+                      alt={galeri.judul}
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white py-3 text-center">
+                      <p className="font-openSans  capitalize text-sm sm:text-base">
+                        {galeri.judul}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
+              {/* TODO:penambahan aparatur desa */}
+              <div className="">
+                <p className="font-openSans">Aparatur Desa</p>
+              </div>
             </div>
           </div>
         </div>

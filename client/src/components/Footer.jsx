@@ -10,12 +10,12 @@ import {
 
 const Footer = () => {
   return (
-    <footer className=" bg-slate-900 text-white mt-auto ">
+    <footer className="font-inter font-thin bg-slate-900 text-white mt-5 ">
       <div className="container mx-auto p-6 sm:p-10 flex flex-col sm:flex-row justify-between">
         {/* Profil Section */}
-        <div className="sm:w-1/4 mb-6 sm:mb-0">
-          <p className="text-2xl font-semibold mb-3">Profil</p>
-          <p className="font-bold text-sm mb-3">
+        <div className="sm:w-1/4 mb-6 sm:mb-0 ">
+          <p className=" text-2xl  mb-3">Profil</p>
+          <p className="text-sm mb-3">
             Desa Tatung - Balong <br /> Kabupaten Ponorogo - Jawa Timur
           </p>
           <p className="text-sm sm:text-base">
@@ -27,7 +27,7 @@ const Footer = () => {
 
         {/* Informasi Daerah Section */}
         <div className="sm:w-1/4 mb-6 sm:mb-0">
-          <p className="text-2xl font-semibold mb-3">Informasi Daerah</p>
+          <p className="text-2xl  mb-3">Informasi Daerah</p>
           <ul className="text-sm list-disc list-inside space-y-1">
             <li>Ponorogo</li>
             <li>Kecamatan Provinsi</li>
@@ -38,7 +38,7 @@ const Footer = () => {
 
         {/* Kontak Section */}
         <div className="sm:w-1/4 mb-6 sm:mb-0">
-          <p className="text-2xl font-semibold mb-3">Kontak</p>
+          <p className="text-2xl  mb-3">Kontak</p>
           <p className="text-sm mb-2">
             Jl. Sadewo, RT/RW 01/02, Ds. Tatung, Kec. Balong, Kab. Ponorogo Kode
             Pos 83992
